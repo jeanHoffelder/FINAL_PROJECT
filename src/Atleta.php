@@ -1,6 +1,6 @@
 <?php
 
-class Pessoa implements ActiveRecord{
+class Atleta implements ActiveRecord{
 
     private int $id;
     
