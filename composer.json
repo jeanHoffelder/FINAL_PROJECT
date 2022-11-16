@@ -1,0 +1,15 @@
+{
+    "name": "marcelo.ost/final_project",
+    "authors": [
+        {
+            "name": "marceloost",
+            "email": "marcelo.ost7@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    }
+}
