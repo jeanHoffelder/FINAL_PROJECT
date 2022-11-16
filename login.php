@@ -7,6 +7,7 @@
     <title>BRASFOOT IF</title>
 </head>
 <body>
-    SAAAALVE
+    <img src="0.png" alt="">
+    <img src="fotoQuadra.png" alt="">
 </body>
 </html>
