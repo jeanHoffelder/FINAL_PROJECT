@@ -1,6 +1,6 @@
 <?php
 
-class Atleta implements ActiveRecord{
+class Administrador implements ActiveRecord{
 
     private int $id;
     
