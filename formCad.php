@@ -1,7 +1,15 @@
 <?php
 if(isset($_POST['botao'])){
     require_once __DIR__."/vendor/autoload.php";
-    $atleta = new Atleta($_POST['nome'],$_POST['data_nasc'],$_POST['turma'],$_POST['altura'],$_POST['posicao'],$_POST['foto'],$_POST['email'],$_POST['senha'],$_POST['sexo']);
+    $atleta = new Atleta($_POST['email']);
+    $atleta->setNome($_POST['nome']);
+    $atleta->setData_nasc($_POST['data_nasc']);
+    $atleta->setTurma($_POST['turma']);
+    $atleta->setAltura($_POST['altura']);
+    $atleta->setPosicao($_POST['posicao']);
+    $atleta->setFoto($_POST['foto']);
+    $atleta->setSenha($_POST['senha']);
+    $atleta->setSexo($_POST['sexo']);
     $atleta->save();
     header("location: index.php");
 }

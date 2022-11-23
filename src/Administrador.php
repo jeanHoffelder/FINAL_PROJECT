@@ -15,6 +15,14 @@ class Administrador implements ActiveRecord{
         $this->senha = $senha;
     }
 
+    public function setId(int $id):void{
+        $this->id = $id;
+    }
+
+    public function getId():int{
+        return $this->id;
+    }
+
     public function getEmail():string{
         return $this->email;
     }
@@ -43,7 +51,7 @@ class Administrador implements ActiveRecord{
         $conexao = new MySQL();
         $sql = "SELECT * FROM administrador WHERE id = {$id}";
         $resultado = $conexao->consulta($sql);
-        $p = new Adminsitrador($resultado[0]['email'],$resultado[0]['senha']);
+        $p = new Administrador($resultado[0]['email'],$resultado[0]['senha']);
         $p->setId($resultado[0]['id']);
         return $p;
     }

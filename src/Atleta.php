@@ -3,8 +3,16 @@
 class Atleta implements ActiveRecord{
 
     private int $id;
+    private string $nome;
+    private string $data_nasc;
+    private string $turma;
+    private string $altura;
+    private string $posicao;
+    private string $foto;
+    private string $senha;
+    private string $sexo;
     
-    public function __construct(private string $nome,private date $data_nasc, private string $turma, private int $altura, private string $posicao, private string $foto, private string $email, private string $senha, private string $sexo){
+    public function __construct(private string $email){
     }
 
     public function setId(int $id):void{
@@ -63,7 +71,7 @@ class Atleta implements ActiveRecord{
         return $this->turma;
     }
 
-    public function getAltura():date{
+    public function getAltura():string{
         return $this->altura;
     }
 
@@ -108,8 +116,16 @@ class Atleta implements ActiveRecord{
         $conexao = new MySQL();
         $sql = "SELECT * FROM atletas WHERE id = {$id}";
         $resultado = $conexao->consulta($sql);
-        $p = new Atleta($resultado[0]['nome'],$resultado[0]['data_nasc'],$resultado[0]['turma'],$resultado[0]['altura'],$resultado[0]['posicao'],$resultado[0]['posicao'],$resultado[0]['foto'],$resultado[0]['email'],$resultado[0]['senha'],$resultado[0]['sexo']);
+        $p = new Atleta($resultado[0]['email']);
         $p->setId($resultado[0]['id']);
+        $p->setNome($resultado[0]['nome']);
+        $p->setData_nasc($resultado[0]['data_nasc']);
+        $p->setTurma($resultado[0]['turma']);
+        $p->setAltura($resultado[0]['altura']);
+        $p->setPosicao($resultado[0]['posicao']);
+        $p->setFoto($resultado[0]['foto']);
+        $p->setSenha($resultado[0]['senha']);
+        $p->setSexo($resultado[0]['sexo']);
         return $p;
     }
     public static function findall():array{
@@ -118,8 +134,16 @@ class Atleta implements ActiveRecord{
         $resultados = $conexao->consulta($sql);
         $atletas = array();
         foreach($resultados as $resultado){
-            $p = new Atleta($resultado[0]['nome'],$resultado[0]['data_nasc'],$resultado[0]['turma'],$resultado[0]['altura'],$resultado[0]['posicao'],$resultado[0]['posicao'],$resultado[0]['foto'],$resultado[0]['email'],$resultado[0]['senha'],$resultado[0]['sexo']);
-            $p->setId($resultado['id']);
+            $p = new Atleta($resultado[0]['email']);
+            $p->setId($resultado[0]['id']);
+            $p->setNome($resultado[0]['nome']);
+            $p->setData_nasc($resultado[0]['data_nasc']);
+            $p->setTurma($resultado[0]['turma']);
+            $p->setAltura($resultado[0]['altura']);
+            $p->setPosicao($resultado[0]['posicao']);
+            $p->setFoto($resultado[0]['foto']);
+            $p->setSenha($resultado[0]['senha']);
+            $p->setSexo($resultado[0]['sexo']);
             $atletas[] = $p;
         }
         return $atletas;

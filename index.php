@@ -1,5 +1,14 @@
-<?php 
-include('conexao.php');
+<?php
+if(isset($_POST['botao'])){
+    require_once __DIR__."/vendor/autoload.php";
+    $atleta = new Atleta($_POST['email']);
+    $atleta->setSenha($_POST['senha']);
+    if($u->authenticate()){
+        header("location: restrita.php");
+    }else{
+        header("location: index.php");
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -8,23 +17,29 @@ include('conexao.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
     <title>BRASFOOT IF</title>
 </head>
 <body>
-    <img src="logo.png" alt="">
-    <img src="fotoQuadra.png" alt="">
-    <form action='' method='POST'>
-        <p>
-            <label>E-mail</label>
-            <input type='text' name='email'>
-        </p>
-        <p>
-            <label>Senha</label>
-            <input type='password' name='senha'>
-        </p>
-        <p>
-            <button type='submit'>Entrar</button>
-        </p>
-    </form>
+    <div class="Logo">
+        <img src="logo.png" alt="">
+    </div>
+
+    <div class="Quadra">
+        <img src="fotoQuadra.png" alt="">
+    </div>
+
+    <div class="Formulario1">
+        <form action="index.php" method='post'>
+            <label for='email'>E-mail:</label>
+            <input type='email' name='email' id='email' required>
+            <label for='password'>Password:</label>
+            <input type='password' name='password' id='password' required>
+            <input type='submit' name='botao' value='Sign in'>
+        </form>
+
+        <a href="formCad.php">Sign Up</a>
+    </div>
+
 </body>
 </html>
