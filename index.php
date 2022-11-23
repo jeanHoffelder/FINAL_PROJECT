@@ -1,13 +1,8 @@
+<<<<<<< HEAD
 <?php
 if(isset($_POST['botao'])){
     require_once __DIR__."/vendor/autoload.php";
     $atleta = new Atleta($_POST['email']);
-    $atleta->setSenha($_POST['senha']);
-    if($u->authenticate()){
-        header("location: restrita.php");
-    }else{
-        header("location: index.php");
-    }
 }
 ?>
 
@@ -21,6 +16,7 @@ if(isset($_POST['botao'])){
     <title>BRASFOOT IF</title>
 </head>
 <body>
+<<<<<<< HEAD
     <div class="Logo">
         <img src="logo.png" alt="">
     </div>
