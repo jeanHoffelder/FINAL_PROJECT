@@ -2,5 +2,5 @@
     define("HOST","localhost");
     define("USUARIO","root");
     define("SENHA","");
-    define("BANCO","contatos");
+    define("BANCO","times_ifrs");
 ?>
