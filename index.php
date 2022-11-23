@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 if(isset($_POST['botao'])){
     require_once __DIR__."/vendor/autoload.php";
@@ -16,7 +15,6 @@ if(isset($_POST['botao'])){
     <title>BRASFOOT IF</title>
 </head>
 <body>
-<<<<<<< HEAD
     <div class="Logo">
         <img src="logo.png" alt="">
     </div>
