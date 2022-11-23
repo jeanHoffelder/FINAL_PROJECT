@@ -38,7 +38,7 @@ if(isset($_POST['botao'])){
         <br>
         E-mail: <input name='email' type='email' required>
         <br>
-        Senha: <input name='senha' type='text' required>
+        Senha: <input name='senha' type='password' required>
         <br>
         Sexo: <input name='sexo' type='text' required>
         <br>
