@@ -149,5 +149,19 @@ class Atleta implements ActiveRecord{
         return $atletas;
     }
 
+    public function authenticate():bool{
+        $conexao = new MySQL();
+        $sql = "SELECT id,senha FROM atletas WHERE email = '{$this->email}'";
+        $resultados = $conexao->consulta($sql);
+        if(password_verify($this->senha,$resultados[0]['senha'])){
+            session_start();
+            $_SESSION['id'] = $resultados[0]['id'];
+            $_SESSION['email'] = $resultados[0]['email'];
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     
 }
