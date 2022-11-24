@@ -26,21 +26,46 @@ if(isset($_POST['botao'])){
     <form action='formCad.php' method='POST'>
         Nome: <input name='nome' type='text' required>
         <br>
-        Data de Nascimento: <input name='data_nasc' type='date' required>
-        <br>
-        Turma: <input name='turma' type='text' required>
-        <br>
-        Altura: <input name='altura' type='text' required>
-        <br>
-        Posição: <input name='posicao' type='text' required>
-        <br>
-        Foto: <input name='foto' type='text' required>
-        <br>
         E-mail: <input name='email' type='email' required>
         <br>
         Senha: <input name='senha' type='password' required>
         <br>
-        Sexo: <input name='sexo' type='text' required>
+        Data de Nascimento: <input name='data_nasc' type='date' required>
+        <br>
+        Turma:
+        <select name='turma'> 
+            <option value='0'>Select</option>
+            <option value='ti1'>1° ano - Técnico em Informática</option>
+            <option value='ti2'>2° ano - Técnico em Informática</option>
+            <option value='ti3'>3° ano - Técnico em Informática</option>
+            <option value='ti4'>4° ano - Técnico em Informática</option>
+            <option value='tq1'>1° ano - Técnico em Química</option>
+            <option value='tq2'>2° ano - Técnico em Química</option>
+            <option value='tq3'>3° ano - Técnico em Química</option>
+            <option value='tq4'>4° ano - Técnico em Química</option>
+            <option value='tma1'>1° ano - Técnico em Meio Ambiente</option>
+            <option value='tma2'>2° ano - Técnico em Meio Ambiente</option>
+            <option value='tma3'>3° ano - Técnico em Meio Ambiente</option>
+            <option value='tma4'>4° ano - Técnico em Meio Ambiente</option>
+        </select>
+        <br>
+        Altura: <input name='altura' type='text' maxLength='3' required>
+        <br>
+        Posição: <select name='posicao'>
+            <option value='0'>Select</option>
+            <option value='goleiro'>Goleiro</option>
+            <option value='fixo'>Fixo</option>
+            <option value='alaDireita'>Ala-Direita</option>
+            <option value='alaEsquerda'>Ala-Esquerda</option>
+            <option value='pivo'>Pivô</option>
+        </select>
+        <br>
+        Sexo: <select name='sexo'>
+            <option value='m'>M</option>
+            <option value='f'>F</option>
+        </select>
+        <br>
+        Foto: <input name='foto' type='file' required>
         <br>
         <input type='submit' name='botao'>
     </form>
