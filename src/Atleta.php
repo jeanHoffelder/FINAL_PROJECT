@@ -98,6 +98,7 @@ class Atleta implements ActiveRecord{
 
     public function save():bool{
         $conexao = new MySQL();
+        $this->senha = password_hash($this->senha,PASSWORD_BCRYPT); 
         if(isset($this->id)){
             $sql = "UPDATE atletas SET nome = '{$this->nome}' ,data_nasc = '{$this->data_nasc}',turma = '{$this->turma}',altura = '{$this->altura}',posicao = '{$this->posicao}',foto = '{$this->foto}',email = '{$this->email}',senha = '{$this->senha}',sexo = '{$this->senha}' WHERE id = {$this->id}";
         }else{
