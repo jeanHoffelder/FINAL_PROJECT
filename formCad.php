@@ -24,11 +24,11 @@ if(isset($_POST['botao'])){
 </head>
 <body>
     <form action='formCad.php' method='POST'>
-        Nome: <input name='nome' type='text' required>
+        Nome: <input name='nome' type='text' placeholder='Ex.: Maria do Rosário' required>
         <br>
-        E-mail: <input name='email' type='email' required>
+        E-mail: <input name='email' type='email' placeholder='mariadorosario@gmail.com' required>
         <br>
-        Senha: <input name='senha' type='password' required>
+        Senha: <input name='senha' type='password' placeholder='*****' required>
         <br>
         Data de Nascimento: <input name='data_nasc' type='date' required>
         <br>
@@ -49,7 +49,7 @@ if(isset($_POST['botao'])){
             <option value='tma4'>4° ano - Técnico em Meio Ambiente</option>
         </select>
         <br>
-        Altura: <input name='altura' type='text' maxLength='3' required>
+        Altura: <input name='altura' type='text' maxLength='3' placeholder='Ex.: 180' required>
         <br>
         Posição: <select name='posicao'>
             <option value='0'>Select</option>
@@ -61,6 +61,7 @@ if(isset($_POST['botao'])){
         </select>
         <br>
         Sexo: <select name='sexo'>
+            <option value='0'>Select</option>
             <option value='m'>M</option>
             <option value='f'>F</option>
         </select>
