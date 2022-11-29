@@ -21,24 +21,31 @@ if(isset($_POST['botao'])){
     <title>BRASFOOT IF</title>
 </head>
 <body>
-    <div class="Logo">
-        <img src="logo.png" alt="">
-    </div>
-
-    <div class="Quadra">
-        <img src="fotoQuadra.png" alt="">
-    </div>
-
-    <div class="Formulario1">
-        <form action="index.php" method='post'>
-            <label for='email'>E-mail:</label>
-            <input type='email' name='email' id='email' required>
-            <label for='password'>Password:</label>
-            <input type='password' name='password' id='password' required>
-            <input type='submit' name='botao' value='Sign in'>
-        </form>
-
-        <a href="formCad.php">Sign Up</a>
+    <div class="container">
+        <div class="quadra">
+            <img src="teste.png" alt="">
+        </div>
+        <div class="logo">
+            <img src="logo.png" alt="">
+        </div>
+        <div class="formulario1">
+            <form action="index.php" method='post'>
+                <label for='email'>E-mail:</label>
+                <br>
+                <input type='email' name='email' id='email' required>
+                <br>
+                <label for='password'>Password:</label>
+                <br>
+                <input type='password' name='password' id='password' required>
+                <br>
+                <input type='submit' name='botao' value='Sign in'>
+                <br>
+            </form>
+            <div class="botao">
+                <a href="formCad.php">Sign Up</a>
+            </div>
+            <br>
+        </div>
     </div>
 
 </body>

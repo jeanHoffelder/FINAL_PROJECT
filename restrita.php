@@ -17,6 +17,5 @@ $atletas = Atleta::findall();
 </head>
 <body>
     <h1>Bem vindo ao time!</h1>
-
 </body>
 </html>

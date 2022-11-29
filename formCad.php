@@ -20,19 +20,20 @@ if(isset($_POST['botao'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formCad.css" />
     <title>Adiciona Atleta</title>
 </head>
 <body>
     <form action='formCad.php' method='POST'>
-        Nome: <input name='nome' type='text' placeholder='Ex.: Thaciano' required>
+        Nome:<br> <input name='nome' type='text' placeholder='Ex.: Thaciano' required>
         <br>
-        E-mail: <input name='email' type='email' placeholder='thaciano@gmail.com' required>
+        E-mail:<br> <input name='email' type='email' placeholder='thaciano@gmail.com' required>
         <br>
-        Senha: <input name='senha' type='password' placeholder='*****' required>
+        Senha:<br> <input name='senha' type='password' placeholder='*****' required>
         <br>
-        Data de Nascimento: <input name='data_nasc' type='date' required>
+        Data de Nascimento:<br> <input name='data_nasc' type='date' required>
         <br>
-        Turma:
+        Turma:<br>
         <select name='turma'> 
             <option value='0'>Select</option>
             <option value='ti1'>1° ano - Técnico em Informática</option>
@@ -49,9 +50,9 @@ if(isset($_POST['botao'])){
             <option value='tma4'>4° ano - Técnico em Meio Ambiente</option>
         </select>
         <br>
-        Altura: <input name='altura' type='text' maxLength='3' placeholder='Ex.: 180' required>
+        Altura:<br> <input name='altura' type='text' maxLength='3' placeholder='Ex.: 180' required>
         <br>
-        Posição: <select name='posicao'>
+        Posição:<br> <select name='posicao'>
             <option value='0'>Select</option>
             <option value='goleiro'>Goleiro</option>
             <option value='fixo'>Fixo</option>
@@ -60,16 +61,19 @@ if(isset($_POST['botao'])){
             <option value='pivo'>Pivô</option>
         </select>
         <br>
-        Sexo: <select name='sexo'>
+        Sexo:<br> <select name='sexo'>
             <option value='0'>Select</option>
             <option value='m'>M</option>
             <option value='f'>F</option>
         </select>
         <br>
-        Foto: <input name='foto' type='file' required>
+        Foto:<br> <input name='foto' type='file' required>
         <br>
         <input type='submit' name='botao'>
     </form>
+
+    <img src="bemvindo.jpg" alt="">
+    <h1>BEM VINDO!</h1>
 </body>
 </html>
 
