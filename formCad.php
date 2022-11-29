@@ -24,9 +24,9 @@ if(isset($_POST['botao'])){
 </head>
 <body>
     <form action='formCad.php' method='POST'>
-        Nome: <input name='nome' type='text' placeholder='Ex.: Maria do Rosário' required>
+        Nome: <input name='nome' type='text' placeholder='Ex.: Thaciano' required>
         <br>
-        E-mail: <input name='email' type='email' placeholder='mariadorosario@gmail.com' required>
+        E-mail: <input name='email' type='email' placeholder='thaciano@gmail.com' required>
         <br>
         Senha: <input name='senha' type='password' placeholder='*****' required>
         <br>
