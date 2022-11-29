@@ -1,7 +1,8 @@
 <?php
 if(isset($_POST['botao'])){
     require_once __DIR__."/vendor/autoload.php";
-    $a = new Atleta($_POST['email'],$_POST['password']);
+    $a = new Atleta($_POST['email']);
+    $a->setSenha($_POST['password']);
     if($a->authenticate()){
         header("location: restrita.php");
     }else{

@@ -133,18 +133,19 @@ class Atleta implements ActiveRecord{
         $conexao = new MySQL();
         $sql = "SELECT * FROM atletas";
         $resultados = $conexao->consulta($sql);
+        
         $atletas = array();
         foreach($resultados as $resultado){
-            $p = new Atleta($resultado[0]['email']);
-            $p->setId($resultado[0]['id']);
-            $p->setNome($resultado[0]['nome']);
-            $p->setData_nasc($resultado[0]['data_nasc']);
-            $p->setTurma($resultado[0]['turma']);
-            $p->setAltura($resultado[0]['altura']);
-            $p->setPosicao($resultado[0]['posicao']);
-            $p->setFoto($resultado[0]['foto']);
-            $p->setSenha($resultado[0]['senha']);
-            $p->setSexo($resultado[0]['sexo']);
+            $p = new Atleta($resultado['email']);
+            $p->setId($resultado['id']);
+            $p->setNome($resultado['nome']);
+            $p->setData_nasc($resultado['data_nasc']);
+            $p->setTurma($resultado['turma']);
+            $p->setAltura($resultado['altura']);
+            $p->setPosicao($resultado['posicao']);
+            $p->setFoto($resultado['foto']);
+            $p->setSenha($resultado['senha']);
+            $p->setSexo($resultado['sexo']);
             $atletas[] = $p;
         }
         return $atletas;

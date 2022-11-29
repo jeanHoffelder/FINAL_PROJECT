@@ -5,7 +5,7 @@ if(!isset($_SESSION['id'])){
 }
 require_once __DIR__."/vendor/autoload.php";
 
-$atletas = Atleta::findallByAtleta($_SESSION['id']);
+$atletas = Atleta::findall();
 ?>
 <!DOCTYPE html>
 <html lang="en">
