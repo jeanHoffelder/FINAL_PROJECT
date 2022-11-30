@@ -35,7 +35,6 @@ if(isset($_POST['botao'])){
         <br>
         Class:<br>
         <select name='turma'> 
-            <option value='0'>Select</option>
             <option value='ti1'>1° ano - Técnico em Informática</option>
             <option value='ti2'>2° ano - Técnico em Informática</option>
             <option value='ti3'>3° ano - Técnico em Informática</option>
