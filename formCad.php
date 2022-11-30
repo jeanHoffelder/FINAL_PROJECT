@@ -68,9 +68,6 @@ if(isset($_POST['botao'])){
         <br>
         <input type='submit' name='botao'>
     </form>
-
-    <img src="bemvindo.jpg" alt="">
-    <h1>Welcome</h1>
 </body>
 </html>
 
