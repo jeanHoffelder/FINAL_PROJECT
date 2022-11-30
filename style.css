@@ -64,9 +64,15 @@ a, a:hover, a:focus, a:active {
 }
 
 .logo{
-    padding: auto;
+	position: relative;
+    left:19%;
 }
+
 
 .quadra{
     clip-path: polygon(0% 0%, 100% 0px, 100% 100%, 0% calc(100% - 550px));
+}
+
+img{
+    width: auto;
 }
