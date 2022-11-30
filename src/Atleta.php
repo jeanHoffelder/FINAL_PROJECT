@@ -155,10 +155,12 @@ class Atleta implements ActiveRecord{
         $conexao = new MySQL();
         $sql = "SELECT id,senha FROM atletas WHERE email = '{$this->email}'";
         $resultados = $conexao->consulta($sql);
+        var_dump($resultados);
         if(password_verify($this->senha,$resultados[0]['senha'])){
             session_start();
             $_SESSION['id'] = $resultados[0]['id'];
             $_SESSION['email'] = $resultados[0]['email'];
+            $_SESSION['nome'] = $resultados[0]['nome'];
             return true;
         }else{
             return false;
