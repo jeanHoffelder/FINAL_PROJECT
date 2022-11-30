@@ -49,7 +49,7 @@ if(isset($_POST['botao'])){
             <option value='tma4'>4° ano - Técnico em Meio Ambiente</option>
         </select>
         <br>
-        Height:<br> <input name='altura' type='text' maxLength='3' placeholder='Ex.: 180' required>
+        Height:<br> <input name='altura' type='number' maxLength='3' placeholder='Ex.: 180' required>
         <br>
         Position:<br> <select name='posicao'>
             <option value='goleiro'>Goalkeeper</option>

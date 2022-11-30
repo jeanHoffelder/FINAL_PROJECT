@@ -19,6 +19,7 @@ $atletas = Atleta::findall();
 <body>
     <img src="logo.png" alt="">
     <h1>You haven't been cast yet :'(</h1>
+    <a href='sair.php'>Logout</a>
     <img src="logo.png" alt="">
 </body>
 </html>
