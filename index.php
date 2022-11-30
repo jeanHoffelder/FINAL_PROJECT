@@ -4,11 +4,9 @@ if(isset($_POST['botao'])){
     $a = new Atleta($_POST['email']);
     $a->setSenha($_POST['password']);
     if(var_dump($a->authenticate())){
-        echo "foi";
-        // header("location: restrita.php");
+        header("location: restrita.php");
     }else{
-        // header("location: index.php");
-        echo "não foi";
+        header("location: index.php");
     }
 }
 ?>
