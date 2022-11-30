@@ -13,9 +13,12 @@ $atletas = Atleta::findall();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleRestrita.css" />
     <title>Página do Time</title>
 </head>
 <body>
-    <h1>Bem vindo ao time!</h1>
+    <img src="logo.png" alt="">
+    <h1>Você ainda não foi escalado :'(</h1>
+    <img src="logo.png" alt="">
 </body>
 </html>
