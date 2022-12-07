@@ -20,7 +20,6 @@ $atletas = Atleta::findall();
 <body>
     <header>
         <?php echo "<h2>Welcome, {$_SESSION['nome']} </h2>"?>
-        <!-- <h2>Welcome, <?php echo $_SESSION['nome']?></h2> -->
     </header>
     <img src="logo.png" alt="">
     <h1>You haven't been cast yet :'(</h1>

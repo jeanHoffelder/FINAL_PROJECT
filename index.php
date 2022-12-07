@@ -3,7 +3,7 @@ if(isset($_POST['botao'])){
     require_once __DIR__."/vendor/autoload.php";
     $a = new Atleta($_POST['email']);
     $a->setSenha($_POST['password']);
-    if(var_dump($a->authenticate())){
+    if($a->authenticate()){
         header("location: restrita.php");
     }else{
         header("location: index.php");
