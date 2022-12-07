@@ -16,7 +16,7 @@ input[type=button], input[type=submit], input[type=reset]{
     cursor: pointer;
 }
 
-input[type=email], input[type=password]{
+input[type=email], input[type=password], input[type=text], input[type=date], input[type=number], input[type=file], select{
     background-color: #92c99b;
     border: none;
     color: #e5e7ca;
@@ -40,9 +40,8 @@ a, a:hover, a:focus, a:active {
 @media screen and (max-width: 601px) {
     
     body{
-        display: flex;
         width: max-content;
-        font-size: 30px;
+        font-size: 25px;
         text-align: center;
     }
     
@@ -54,22 +53,26 @@ a, a:hover, a:focus, a:active {
     }
     
     input[type=button], input[type=submit], input[type=reset]{
-        padding: 32px 64px;
+        padding: 15px 30px;
         margin: 15px 10px;
         font-size: 35px;
     }
     
-    input[type=email], input[type=password]{
-        padding: 32px 64px;
-        margin: auto;
-        font-size: 35px;
+    input[type=email], input[type=password], input[type=text], input[type=date], input[type=number]{
+        padding: center;
+        margin: center;
+        font-size: 25px;
     }
-    
-    .botao{
-        height: 115px;
-        width: 235px;
-        margin: auto;
-        padding: 35px 30px;
+
+    input[type=file], select{
+        padding: 3px 5px;
+        margin: 3px 2px;
+        font-size: 19px;
+    }
+
+    .botao,a,a:hover, a:focus, a:active {
+        margin: center;
+        padding: center;
     }
     
     .logo{
@@ -95,5 +98,5 @@ a, a:hover, a:focus, a:active {
 
 /*=============  Computador  =============*/
 @media screen and (min-width: 1024px) {
-    
+
 }
