@@ -1,62 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
 
-/*=============  Celular  =============*/
-
-*{
-    box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
-}
+/*=============  Geral  =============*/
 
 body{
-    display: flex;
-    width: max-content;
     background-color: #ffffff;
-    color:#5aa166;
-    font-size: 30px;
-    text-align: center;
+    color: #5aa166;
     font-family: 'Noto Sans', sans-serif;
-}
-
-.container{
-    display: flex;
-    width: max-content;
-    flex-direction: column;
-    align-items: center;
 }
 
 input[type=button], input[type=submit], input[type=reset]{
     background-color: #5aa166;
     border: #469653;
     color: #e5e7ca;
-    padding: 32px 64px;
     text-decoration: none;
-    margin: 15px 10px;
     cursor: pointer;
-    font-size: 35px;
-    
-  }
+}
 
 input[type=email], input[type=password]{
     background-color: #92c99b;
     border: none;
     color: #e5e7ca;
-    padding: 32px 64px;
     text-decoration: none;
-    margin: auto;
     cursor: pointer;
-    font-size: 35px;
-
 }
 
 .botao{
     border: none;
     background-color: #5aa166;
     color: #ffffff;
-    height: 115px;
-    width: 235px;
-    margin: auto;
-    padding: 35px 30px;
     font-weight:bold
 }
 
@@ -65,17 +36,64 @@ a, a:hover, a:focus, a:active {
     color: inherit;
 }
 
-.logo{
-    display: block;
-    margin-left: auto;
-    margin-right: auto 
+/*=============  Celular  =============*/
+@media screen and (max-width: 601px) {
+    
+    body{
+        display: flex;
+        width: max-content;
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .container{
+        display: flex;
+        width: max-content;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    input[type=button], input[type=submit], input[type=reset]{
+        padding: 32px 64px;
+        margin: 15px 10px;
+        font-size: 35px;
+    }
+    
+    input[type=email], input[type=password]{
+        padding: 32px 64px;
+        margin: auto;
+        font-size: 35px;
+    }
+    
+    .botao{
+        height: 115px;
+        width: 235px;
+        margin: auto;
+        padding: 35px 30px;
+    }
+    
+    .logo{
+        display: block;
+        margin-left: auto;
+        margin-right: auto 
+    }
+    
+    
+    .quadra{
+        clip-path: polygon(0% 0%, 100% 0px, 100% 100%, 0% calc(100% - 550px));
+    }
+    
+    img{
+        width: auto;
+    }
+  }
+
+/*=============  Tablet  =============*/
+@media screen and (max-width: 1024px) {
+
 }
 
-
-.quadra{
-    clip-path: polygon(0% 0%, 100% 0px, 100% 100%, 0% calc(100% - 550px));
-}
-
-img{
-    width: auto;
+/*=============  Computador  =============*/
+@media screen and (min-width: 1024px) {
+    
 }
