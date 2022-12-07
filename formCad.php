@@ -51,7 +51,7 @@ if(isset($_POST['botao'])){
         <br>
         Height:<br> <input name='altura' type='number' maxLength='3' placeholder='Ex.: 180' required>
         <br>
-        Position:<br> <select name='posicao'>
+        Favorite Position:<br> <select name='posicao'>
             <option value='goleiro'>Goalkeeper</option>
             <option value='fixo'>Fixed</option>
             <option value='alaDireita'>Right-Wing</option>

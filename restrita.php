@@ -24,6 +24,9 @@ $atletas = Atleta::findall();
     <img src="logo.png" alt="">
     <h1>You haven't been cast yet :'(</h1>
     <a href='sair.php'>Logout</a>
+    <?php
+    echo "<a href=formEdit.php?id={$_SESSION['id']}>Editar Perfil</a>";
+    ?>
     <img src="logo.png" alt="">
 </body>
 </html>
