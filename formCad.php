@@ -25,6 +25,7 @@ if(isset($_POST['botao'])){
 </head>
 <body>
     <a href='index.php'>Go Back</a>
+    <h1>INFORM US THE FOLLOWING INFO</h1>
     <form action='formCad.php' method='POST'>
         Name:<br> <input name='nome' type='text' placeholder='Ex.: Thaciano' required>
         <br>

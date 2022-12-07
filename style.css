@@ -55,7 +55,7 @@ a, a:hover, a:focus, a:active {
     input[type=button], input[type=submit], input[type=reset]{
         padding: 15px 30px;
         margin: 15px 10px;
-        font-size: 35px;
+        font-size: 25px;
     }
     
     input[type=email], input[type=password], input[type=text], input[type=date], input[type=number]{
@@ -70,27 +70,15 @@ a, a:hover, a:focus, a:active {
         font-size: 19px;
     }
 
+    h1{
+        font-size: 21px;
+    }
+
     .botao,a,a:hover, a:focus, a:active {
         margin: center;
         padding: center;
     }
-    
-    .logo{
-        display: block;
-        margin-left: auto;
-        margin-right: auto 
-    }
-    
-    
-    .quadra{
-        clip-path: polygon(0% 0%, 100% 0px, 100% 100%, 0% calc(100% - 550px));
-    }
-    
-    img{
-        width: auto;
-    }
-  }
-
+}
 /*=============  Tablet  =============*/
 @media screen and (max-width: 1024px) {
 
