@@ -45,6 +45,9 @@ if(isset($_POST['botao'])){
                 <a href="formCad.php">Sign Up</a>
             </div>
             <br>
+            <div>
+                <a href='loginAdmin.php'>Administrador?</a>
+            </div>
         </div>
     </div>
 

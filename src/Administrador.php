@@ -3,8 +3,9 @@
 class Administrador implements ActiveRecord{
 
     private int $id;
+    private string $senha;
     
-    public function __construct(private string $email, private string $senha){
+    public function __construct(private string $email){
     }
 
     public function setEmail(string $email):void{
