@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 16-Nov-2022 às 13:42
+-- Tempo de geração: 07-Dez-2022 às 13:30
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.0.15
 
@@ -49,8 +49,16 @@ CREATE TABLE `atletas` (
   `email` varchar(200) NOT NULL,
   `senha` varchar(200) NOT NULL,
   `id` int(11) NOT NULL,
-  `sexo` varchar(11) NOT NULL
+  `sexo` varchar(11) NOT NULL,
+  `Jogaem` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `atletas`
+--
+
+INSERT INTO `atletas` (`nome`, `data_nasc`, `turma`, `altura`, `posicao`, `foto`, `email`, `senha`, `id`, `sexo`, `Jogaem`) VALUES
+('Otávio João Maldaner', '2022-12-01', 'ti1', 188, 'goleiro', 'Foto_Oficial_Lula_BG_Branco-3.jpg', 'a@a.com', '$2y$10$BlpavPghfAkwb38Sf/A7GOSAAi5GSVOEclEi.MLd2xsctziHaY/zS', 11, 'm', NULL);
 
 -- --------------------------------------------------------
 
@@ -59,18 +67,27 @@ CREATE TABLE `atletas` (
 --
 
 CREATE TABLE `time` (
+  `idTime` int(11) NOT NULL,
   `nome_time` varchar(200) NOT NULL,
-  `id_goleiro` int(11) NOT NULL,
-  `id_fixo` int(11) NOT NULL,
-  `id_alaDireita` int(11) NOT NULL,
-  `id_alaEsquerda` int(11) NOT NULL,
-  `id_Pivo` int(11) NOT NULL,
-  `id_reseva1` int(11) NOT NULL,
-  `id_reseva2` int(11) NOT NULL,
-  `id_reseva3` int(11) NOT NULL,
-  `id_reseva4` int(11) NOT NULL,
-  `id_reseva5` int(11) NOT NULL
+  `id_goleiro` int(11) DEFAULT NULL,
+  `id_fixo` int(11) DEFAULT NULL,
+  `id_alaDireita` int(11) DEFAULT NULL,
+  `id_alaEsquerda` int(11) DEFAULT NULL,
+  `id_Pivo` int(11) DEFAULT NULL,
+  `id_reseva1` int(11) DEFAULT NULL,
+  `id_reseva2` int(11) DEFAULT NULL,
+  `id_reseva3` int(11) DEFAULT NULL,
+  `id_reseva4` int(11) DEFAULT NULL,
+  `id_reseva5` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `time`
+--
+
+INSERT INTO `time` (`idTime`, `nome_time`, `id_goleiro`, `id_fixo`, `id_alaDireita`, `id_alaEsquerda`, `id_Pivo`, `id_reseva1`, `id_reseva2`, `id_reseva3`, `id_reseva4`, `id_reseva5`) VALUES
+(2, 'time1', 11, 11, 11, 11, 11, 11, 11, 11, 11, 11),
+(4, '', 11, 11, 11, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Índices para tabelas despejadas
@@ -86,12 +103,14 @@ ALTER TABLE `administrador`
 -- Índices para tabela `atletas`
 --
 ALTER TABLE `atletas`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fktime` (`Jogaem`);
 
 --
 -- Índices para tabela `time`
 --
 ALTER TABLE `time`
+  ADD PRIMARY KEY (`idTime`),
   ADD KEY `fkgoleiro` (`id_goleiro`),
   ADD KEY `fkfixo` (`id_fixo`),
   ADD KEY `fkalaDireita` (`id_alaDireita`),
@@ -117,11 +136,23 @@ ALTER TABLE `administrador`
 -- AUTO_INCREMENT de tabela `atletas`
 --
 ALTER TABLE `atletas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT de tabela `time`
+--
+ALTER TABLE `time`
+  MODIFY `idTime` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restrições para despejos de tabelas
 --
+
+--
+-- Limitadores para a tabela `atletas`
+--
+ALTER TABLE `atletas`
+  ADD CONSTRAINT `fktime` FOREIGN KEY (`Jogaem`) REFERENCES `time` (`idTime`);
 
 --
 -- Limitadores para a tabela `time`

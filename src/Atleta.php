@@ -98,10 +98,11 @@ class Atleta implements ActiveRecord{
 
     public function save():bool{
         $conexao = new MySQL();
-        $this->senha = password_hash($this->senha,PASSWORD_BCRYPT); 
+        
         if(isset($this->id)){
-            $sql = "UPDATE atletas SET nome = '{$this->nome}' ,data_nasc = '{$this->data_nasc}',turma = '{$this->turma}',altura = '{$this->altura}',posicao = '{$this->posicao}',foto = '{$this->foto}',email = '{$this->email}',senha = '{$this->senha}',sexo = '{$this->senha}' WHERE id = {$this->id}";
+            $sql = "UPDATE atletas SET nome = '{$this->nome}' ,data_nasc = '{$this->data_nasc}',altura = '{$this->altura}',foto = '{$this->foto}',email = '{$this->email}' WHERE id = {$this->id}";
         }else{
+            $this->senha = password_hash($this->senha,PASSWORD_BCRYPT); 
             $sql = "INSERT INTO atletas (nome,data_nasc,turma,altura,posicao,foto,email,senha,sexo) VALUES ('{$this->nome}','{$this->data_nasc}','{$this->turma}','{$this->altura}','{$this->posicao}','{$this->foto}','{$this->email}','{$this->senha}','{$this->sexo}')";
         }
         return $conexao->executa($sql);
@@ -153,9 +154,8 @@ class Atleta implements ActiveRecord{
 
     public function authenticate():bool{
         $conexao = new MySQL();
-        $sql = "SELECT id,senha FROM atletas WHERE email = '{$this->email}'";
+        $sql = "SELECT * FROM atletas WHERE email = '{$this->email}'";
         $resultados = $conexao->consulta($sql);
-        var_dump($resultados);
         if(password_verify($this->senha,$resultados[0]['senha'])){
             session_start();
             $_SESSION['id'] = $resultados[0]['id'];
