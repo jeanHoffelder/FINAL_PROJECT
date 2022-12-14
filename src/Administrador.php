@@ -92,3 +92,4 @@ class Administrador implements ActiveRecord{
     }
     
 }
+}
