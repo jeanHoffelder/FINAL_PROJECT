@@ -12,10 +12,24 @@ $atletas = Atleta::findall();
     <title>Página de Atletas</title>
 </head>
 <body>
-
-<a href='formCad.php'>Cadastrar Atleta</a>
-<br>
-<a href='login.php'>Fazer Login</a>
+<table>
+    <tr>
+        <td>Nome</td>
+        <td>Posição</td>
+        <td>Idade</td>
+        <td>Turma</td>
+    </tr>
+    <?php
+    foreach($atletas as $atleta){
+        echo "<tr>";
+        echo "<td>{$atleta->getNome()}</td>";
+        echo "<td>{$atleta->getPosicao()}</td>";
+        echo "<td>{$atleta->getData_nasc()}</td>";
+        echo "<td>{$atleta->getTurma()}</td>";
+        echo "</tr>";
+    }
+    ?>
+</table>
 </body>
 </html>
 
