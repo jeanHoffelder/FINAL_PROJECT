@@ -48,6 +48,10 @@ if(isset($_POST['botao'])){
                 </div>
                 <br>
             </div>
+            <br>
+            <div>
+                <a href='loginAdmin.php'>Administrador?</a>
+            </div>
         </div>
     </div>
 
