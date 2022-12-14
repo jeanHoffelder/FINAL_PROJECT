@@ -11,7 +11,7 @@ body{
 input[type=button], input[type=submit], input[type=reset]{
     background-color: #5aa166;
     border: #469653;
-    color: #e5e7ca;
+    color: #eff0cf;
     text-decoration: none;
     cursor: pointer;
 }
@@ -19,9 +19,13 @@ input[type=button], input[type=submit], input[type=reset]{
 input[type=email], input[type=password], input[type=text], input[type=date], input[type=number], input[type=file], select{
     background-color: #92c99b;
     border: none;
-    color: #e5e7ca;
+    color: #eff0cf;
     text-decoration: none;
     cursor: pointer;
+}
+
+input[type=submit]{
+    font-weight: bold;
 }
 
 .botao{
@@ -78,8 +82,9 @@ a, a:hover, a:focus, a:active {
     }
 
     label{
-        background-color: #382F26;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         color: white;
+        font-weight: bold;
     }
 }
 /*=============  Tablet  =============*/
