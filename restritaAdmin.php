@@ -8,6 +8,8 @@ require_once __DIR__."/vendor/autoload.php";
 
 $atletas = Atleta::findall();
 
+$time = Time::findall();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,5 +24,22 @@ $atletas = Atleta::findall();
     <h1>Seja bem vindo Administrador</h1>
     <a href='sair.php'>Logout</a>
 
+</body>
+</html>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleRestrita.css" />
+    <title>Team Page</title>
+</head>
+<body>
+    <header>
+        <?php echo "<h2>Welcome, {$_SESSION['nome']} </h2>"?>
+    </header>
+    <img src="logo.png" alt="">
+    <h1>You haven't been cast yet :'(</h1>
+    <a href='sair.php'>Logout</a>
+    <?php
+    echo "<a href=formEdit.php?id={$_SESSION['id']}>Editar Perfil</a>";
+    ?>
+    <img src="logo.png" alt="">
 </body>
 </html>
