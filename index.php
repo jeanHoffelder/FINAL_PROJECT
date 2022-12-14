@@ -24,7 +24,7 @@ if(isset($_POST['botao'])){
 <body>
     <div class="container">
         <div class="quadra">
-            <img src="teste.png" alt="">
+            <img src="fotoQuadra.jpg" alt="">
         </div>
         <div class="container2">
             <div class="logo">
@@ -49,9 +49,10 @@ if(isset($_POST['botao'])){
                 <br>
             </div>
             <br>
-            <div>
-                <a href='loginAdmin.php'>Administrador?</a>
-            </div>
+
+        </div>
+        <div class="admin">
+            <a href='loginAdmin.php'>Administrador?</a>
         </div>
     </div>
 

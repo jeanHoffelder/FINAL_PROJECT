@@ -3,7 +3,7 @@
 /*=============  Geral  =============*/
 
 body{
-    background-color: #ffffff;
+    background-color: #382F26;
     color: #5aa166;
     font-family: 'Noto Sans', sans-serif;
 }
@@ -45,24 +45,18 @@ a, a:hover, a:focus, a:active {
         text-align: center;
     }
     
-    .container{
-        display: flex;
-        width: max-content;
-        flex-direction: column;
-        align-items: center;
-    }
     
     input[type=button], input[type=submit], input[type=reset]{
         width: 60%;
-        padding: 15px 30px;
-        margin: 15px 10px;
+        padding: 10px 10px;
+        margin: 10px 10px;
         font-size: 15px;
     }
     
     input[type=email], input[type=password], input[type=text], input[type=date], input[type=number], select{
         width: 60%;
-        padding: center;
-        margin: center;
+        padding: 3px 5px;
+        margin: 3px 2px;
         font-size: 15px;
     }
 
@@ -78,8 +72,14 @@ a, a:hover, a:focus, a:active {
     }
 
     .botao,a,a:hover, a:focus, a:active {
-        margin: center;
-        padding: center;
+        margin: auto;
+        padding: 2%;
+        width: 60%;
+    }
+
+    label{
+        background-color: #382F26;
+        color: white;
     }
 }
 /*=============  Tablet  =============*/
