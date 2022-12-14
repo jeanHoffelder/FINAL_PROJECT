@@ -20,15 +20,42 @@ $atletas = Atleta::findall();
         <td>Turma</td>
     </tr>
     <?php
+    function calcularIdade($data){
+        $idade = 0;
+        $data_nascimento = date('Y-m-d', strtotime($data));
+        list($anoNasc, $mesNasc, $diaNasc) = explode('-', $data_nascimento);
+        
+           $idade      = date("Y") - $anoNasc;
+           if (date("m") < $mesNasc){
+               $idade -= 1;
+           } elseif ((date("m") == $mesNasc) && (date("d") <= $diaNasc) ){
+               $idade -= 1;
+           }
+        
+           return $idade;
+       }
     foreach($atletas as $atleta){
         echo "<tr>";
         echo "<td>{$atleta->getNome()}</td>";
         echo "<td>{$atleta->getPosicao()}</td>";
-        echo "<td>{$atleta->getData_nasc()}</td>";
+        echo "<td>".calcularIdade($atleta->getData_nasc())."</td>";
         echo "<td>{$atleta->getTurma()}</td>";
         echo "</tr>";
     }
+
     ?>
+    
+    Goleiro <select name='posicao'>
+        <?php
+            foreach($atletas as $atleta){
+                ?>
+                <option value=""> <?php
+                echo "<tr>";
+                echo "<td>{$atleta->getNome()}</td>"; ?>
+                </option> <?php
+        }?>
+    </select>
+    
 </table>
 </body>
 </html>
