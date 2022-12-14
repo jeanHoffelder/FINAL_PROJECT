@@ -53,25 +53,28 @@ a, a:hover, a:focus, a:active {
     }
     
     input[type=button], input[type=submit], input[type=reset]{
+        width: 60%;
         padding: 15px 30px;
         margin: 15px 10px;
-        font-size: 25px;
+        font-size: 15px;
     }
     
-    input[type=email], input[type=password], input[type=text], input[type=date], input[type=number]{
+    input[type=email], input[type=password], input[type=text], input[type=date], input[type=number], select{
+        width: 60%;
         padding: center;
         margin: center;
-        font-size: 25px;
+        font-size: 15px;
     }
 
     input[type=file], select{
+        width: 60%;
         padding: 3px 5px;
         margin: 3px 2px;
-        font-size: 19px;
+        font-size: 15px;
     }
 
     h1{
-        font-size: 21px;
+        font-size: 20px;
     }
 
     .botao,a,a:hover, a:focus, a:active {
