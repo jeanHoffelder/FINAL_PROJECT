@@ -6,12 +6,12 @@ body{
     justify-content: center;
     align-items: center;
     font-size: 15px;
+
 }
 
 .admin{
     color: white;
 }
-
 
 /*=============  Celular  =============*/
 @media screen and (max-width: 601px) {
@@ -38,3 +38,52 @@ body{
 
     }
 }    
+
+/*=============  Tablet  =============*/
+@media screen and (max-width: 1024px) {
+    .logo{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    
+    .quadra{
+        clip-path: polygon(0% 0%, 100% 0px, 100% 100%, 0% calc(100% - 350px));
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        filter: blur(0.2em);
+    }
+
+    .container2{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+}
+
+/*=============  Computador  =============*/
+@media screen and (min-width: 1024px) {
+    .logo{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    
+    .quadra{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        filter: blur(0.2em);
+    }
+
+    .container2{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+}

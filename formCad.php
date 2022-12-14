@@ -25,8 +25,8 @@ if(isset($_POST['botao'])){
     <title>Sign Up</title>
 </head>
 <body>
-    <a href='index.php'>Go Back</a>
-    <h1>INFORM US THE FOLLOWING INFO</h1>
+    <a href='index.php'>Back</a>
+    <h1>FILL IN THE FOLLOWING INFO</h1>
     <form action='formCad.php' method='POST'>
         Name:<br> <input name='nome' type='text' placeholder='Ex.: Thaciano' required>
         <br>
@@ -36,7 +36,7 @@ if(isset($_POST['botao'])){
         <br>
         Birth date:<br> <input name='data_nasc' type='date' required>
         <br>
-        Class:<br>
+        Group:<br>
         <select name='turma'> 
             <option value='ti1'>1° ano - Técnico em Informática</option>
             <option value='ti2'>2° ano - Técnico em Informática</option>
@@ -62,7 +62,7 @@ if(isset($_POST['botao'])){
             <option value='pivo'>Target</option>
         </select>
         <br>
-        Sex:<br> <select name='sexo'>
+        Gender:<br> <select name='sexo'>
             <option value='m'>M</option>
             <option value='f'>F</option>
         </select>

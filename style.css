@@ -6,6 +6,8 @@ body{
     background-color: #382F26;
     color: #5aa166;
     font-family: 'Noto Sans', sans-serif;
+    width: max-content;
+    text-align: center;
 }
 
 input[type=button], input[type=submit], input[type=reset]{
@@ -40,15 +42,17 @@ a, a:hover, a:focus, a:active {
     color: inherit;
 }
 
+label{
+    color: white;
+    font-weight: bold;
+}
+
 /*=============  Celular  =============*/
 @media screen and (max-width: 601px) {
     
     body{
-        width: max-content;
         font-size: 25px;
-        text-align: center;
     }
-    
     
     input[type=button], input[type=submit], input[type=reset]{
         width: 60%;
@@ -83,16 +87,93 @@ a, a:hover, a:focus, a:active {
 
     label{
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-        color: white;
-        font-weight: bold;
     }
 }
 /*=============  Tablet  =============*/
 @media screen and (max-width: 1024px) {
 
+    body{
+        font-size: 30px;
+    }
+    
+    
+    input[type=button], input[type=submit], input[type=reset]{
+        width: 60%;
+        padding: 10px 10px;
+        margin: 10px 10px;
+        font-size: 20px;
+    }
+    
+    input[type=email], input[type=password], input[type=text], input[type=date], input[type=number], select{
+        width: 60%;
+        padding: 3px 5px;
+        margin: 3px 2px;
+        font-size: 20px;
+    }
+
+    input[type=file], select{
+        width: 60%;
+        padding: 3px 5px;
+        margin: 3px 2px;
+        font-size: 20px;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+
+    .botao,a,a:hover, a:focus, a:active {
+        margin: auto;
+        padding: 2%;
+        width: 60%;
+    }
+
+    label{
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+
 }
 
 /*=============  Computador  =============*/
 @media screen and (min-width: 1024px) {
+    body{
+        font-size: 30px;
+    }
+    
+    
+    input[type=button], input[type=submit], input[type=reset]{
+        width: 60%;
+        padding: 10px 10px;
+        margin: 10px 10px;
+        font-size: 20px;
+    }
+    
+    input[type=email], input[type=password], input[type=text], input[type=date], input[type=number], select{
+        width: 60%;
+        padding: 3px 5px;
+        margin: 3px 2px;
+        font-size: 20px;
+    }
+
+    input[type=file], select{
+        width: 60%;
+        padding: 3px 5px;
+        margin: 3px 2px;
+        font-size: 20px;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+
+    .botao,a,a:hover, a:focus, a:active {
+        margin: auto;
+        padding: 2%;
+        width: 60%;
+    }
+
+    label{
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
 
 }

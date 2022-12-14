@@ -52,7 +52,7 @@ if(isset($_POST['botao'])){
 
         </div>
         <div class="admin">
-            <a href='loginAdmin.php'>Administrador?</a>
+            <a href='loginAdmin.php'>Admin?</a>
         </div>
     </div>
 
