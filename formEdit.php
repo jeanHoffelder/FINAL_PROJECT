@@ -36,19 +36,19 @@ if(isset($_POST['botao'])){
         ?>
         <br>
         <?php
-            echo "Nome: <input name='nome' value='{$atleta->getNome()}' type='text' required>";
+            echo "Name: <input name='nome' value='{$atleta->getNome()}' type='text' required>";
         ?>
         <br>
         <?php
-            echo "Data_nasc: <input name='data_nasc' value='{$atleta->getData_nasc()}' type='date' required>";
+            echo "Birth date: <input name='data_nasc' value='{$atleta->getData_nasc()}' type='date' required>";
         ?>
         <br>
         <?php
-            echo "Altura: <input name='altura' value='{$atleta->getAltura()}' type='number' maxLenght='3' required>";
+            echo "Height: <input name='altura' value='{$atleta->getAltura()}' type='number' maxLenght='3' required>";
         ?>
         <br>
         <?php
-            echo "Foto: <input name='foto' value='{$atleta->getFoto()}' type='text' required>";
+            echo "Photo: <input name='foto' value='{$atleta->getFoto()}' type='text' required>";
         ?>
         <br>
         

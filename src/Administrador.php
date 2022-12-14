@@ -36,7 +36,7 @@ class Administrador implements ActiveRecord{
         $conexao = new MySQL();
         if(isset($this->id)){
             $sql = "UPDATE administrador SET email = '{$this->email}',senha = '{$this->senha}' WHERE id = {$this->id}";
-        }else{
+        }else{ 
             $sql = "INSERT INTO administrador (email,senha) VALUES ('{$this->email}','{$this->senha}')";
         }
         return $conexao->executa($sql);
@@ -58,7 +58,7 @@ class Administrador implements ActiveRecord{
     }
     public static function findall():array{
         $conexao = new MySQL();
-        $sql = "SELECT * FROM adminsitrador";
+        $sql = "SELECT * FROM administrador";
         $resultados = $conexao->consulta($sql);
         $administrador = array();
         foreach($resultados as $resultado){
@@ -68,6 +68,18 @@ class Administrador implements ActiveRecord{
         }
         return $administrador;
     }
-
+    public function authenticate():bool{
+        $conexao = new MySQL();
+        $sql = "SELECT * FROM administrador WHERE email = '{$this->email}'";
+        $resultados = $conexao->consulta($sql);
+        if($this->senha==$resultados[0]['senha']){
+            session_start();
+            $_SESSION['email'] = $resultados[0]['email'];
+            $_SESSION['id'] = $resultados[0]['id'];
+            return true;
+        }else{
+            return false;
+        }
+    }
     
 }
