@@ -42,7 +42,20 @@ $atletas = Atleta::findall();
         echo "<td>{$atleta->getTurma()}</td>";
         echo "</tr>";
     }
+
     ?>
+    
+    Goleiro <select name='posicao'>
+        <?php
+            foreach($atletas as $atleta){
+                ?>
+                <option value=""> <?php
+                echo "<tr>";
+                echo "<td>{$atleta->getNome()}</td>"; ?>
+                </option> <?php
+        }?>
+    </select>
+    
 </table>
 </body>
 </html>
