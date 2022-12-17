@@ -40,12 +40,12 @@ $atletas = Atleta::findall();
         echo "<td>{$atleta->getPosicao()}</td>";
         echo "<td>".calcularIdade($atleta->getData_nasc())."</td>";
         echo "<td>{$atleta->getTurma()}</td>";
-        echo "</tr>";
+        echo "</tr>";s
     }
 
     ?>
     
-    Goleiro <select name='posicao'>
+    Goleiro: <select name='posicao'>
         <?php
             foreach($atletas as $atleta){
                 ?>
