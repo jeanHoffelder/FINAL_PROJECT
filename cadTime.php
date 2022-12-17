@@ -40,7 +40,7 @@ $atletas = Atleta::findall();
         echo "<td>{$atleta->getPosicao()}</td>";
         echo "<td>".calcularIdade($atleta->getData_nasc())."</td>";
         echo "<td>{$atleta->getTurma()}</td>";
-        echo "</tr>";s
+        echo "</tr>";
     }
 
     ?>
