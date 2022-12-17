@@ -55,16 +55,15 @@ foreach($atletas as $atleta){
     $posicao = $atleta->getPosicao();
     $idade = calcularIdade($atleta->getData_nasc());
     $turma = $atleta->getTurma();
+    
+    echo '<div class="card">';
+    echo '  <img src="atleta.jpg" alt="Foto do atleta">';
+    echo '  <h1>' . $nome . '</h1>';
+    echo '  <p>Posição: ' . $posicao . '</p>';
+    echo '  <p>Idade: ' . $idade . ' anos</p>';
+    echo '  <p>Turma: ' . $turma . '</p>';
+    echo '</div>';
 }
-// Cria o card do atleta
-echo '<div class="card">';
-echo '  <img src="atleta.jpg" alt="Foto do atleta">';
-echo '  <h1>' . $nome . '</h1>';
-echo '  <p>Posição: ' . $posicao . '</p>';
-echo '  <p>Idade: ' . $idade . ' anos</p>';
-echo '  <p>Turma: ' . $turma . '</p>';
-echo '</div>';
-
 ?>
 
 </body>
