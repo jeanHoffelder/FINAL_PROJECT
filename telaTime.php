@@ -1,6 +1,13 @@
 <?php
 require_once __DIR__."/vendor/autoload.php";
 $atletas = Atleta::findall(); 
+
+session_start();
+if(!isset($_SESSION['id'])){
+    header("location:index.php");
+}
+
+
 ?>
 <html>
 <head>
@@ -55,7 +62,7 @@ function calcularIdade($data){
     
        return $idade;
    } 
-// Recebe as informações do atleta
+
 echo "<div id='container'>";
 
 foreach($atletas as $atleta){
@@ -65,7 +72,7 @@ foreach($atletas as $atleta){
   $idade = calcularIdade($atleta->getData_nasc());
   $turma = $atleta->getTurma();
   $id = $atleta->getId();
-  
+
   echo "<div class='card' draggable='true' id=$id>";
     echo "<div class='elementos_card'>";
       echo " <img width=150px src={$foto}>";
@@ -79,25 +86,21 @@ foreach($atletas as $atleta){
 echo "</div>";
 ?>
 <script>
-  // Obtém o container onde os cards serão arrastados
+
   var container = document.getElementById('container');
 
-  // Adiciona os ouvintes de eventos de arrastar e soltar ao container
   container.addEventListener('dragstart', dragStart);
   container.addEventListener('dragover', dragOver);
   container.addEventListener('drop', dragDrop);
 
-  // Função chamada quando o usuário começa a arrastar um card
   function dragStart(e) {
     e.dataTransfer.setData('text/plain', e.target.id);
   }
 
-  // Função chamada quando o usuário arrasta um card sobre outro
   function dragOver(e) {
     e.preventDefault();
   }
 
-  // Função chamada quando o usuário solta um card em outro
   function dragDrop(e) {
     var id = e.dataTransfer.getData('text');
     var card = document.getElementById(id);
