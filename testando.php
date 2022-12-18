@@ -52,48 +52,47 @@ function calcularIdade($data){
 // Recebe as informações do atleta
 echo "<div id='container'>";
 foreach($atletas as $atleta){
-    $nome = $atleta->getNome();
-    $posicao = $atleta->getPosicao();
-    $idade = calcularIdade($atleta->getData_nasc());
-    $turma = $atleta->getTurma();
-    $id = $atleta->getId();
+  $nome = $atleta->getNome();
+  $posicao = $atleta->getPosicao();
+  $idade = calcularIdade($atleta->getData_nasc());
+  $turma = $atleta->getTurma();
+  $id = $atleta->getId();
 
-    echo "<div class='card' draggable='true' id='card-1'>";
-    echo "<img src='atleta.jpg' alt='Foto do atleta'>";
-    echo "<h1> $nome </h1>";
-    echo "<p>Posição: $posicao </p>";
-    echo "<p>Idade: $idade anos</p>";
-    echo "<p>Turma: $turma </p>";
-    echo "</div>";
-
+  echo "<div class='card' draggable='true' id=$id>";
+  echo "<img src='atleta.jpg' alt='Foto do atleta'>";
+  echo "<h1> $nome </h1>";
+  echo "<p>Posição: $posicao </p>";
+  echo "<p>Idade: $idade anos</p>";
+  echo "<p>Turma: $turma </p>";
+  echo "</div>";
 } 
 echo "</div>";
 ?>
 <script>
-    // Obtém o container onde os cards serão arrastados
-    var container = document.getElementById('container');
+  // Obtém o container onde os cards serão arrastados
+  var container = document.getElementById('container');
 
-    // Adiciona os ouvintes de eventos de arrastar e soltar ao container
-    container.addEventListener('dragstart', dragStart);
-    container.addEventListener('dragover', dragOver);
-    container.addEventListener('drop', dragDrop);
+  // Adiciona os ouvintes de eventos de arrastar e soltar ao container
+  container.addEventListener('dragstart', dragStart);
+  container.addEventListener('dragover', dragOver);
+  container.addEventListener('drop', dragDrop);
 
-    // Função chamada quando o usuário começa a arrastar um card
-    function dragStart(e) {
-        e.dataTransfer.setData('text/plain', e.target.id);
-    }
+  // Função chamada quando o usuário começa a arrastar um card
+  function dragStart(e) {
+    e.dataTransfer.setData('text/plain', e.target.id);
+  }
 
-    // Função chamada quando o usuário arrasta um card sobre outro
-    function dragOver(e) {
-        e.preventDefault();
-    }
+  // Função chamada quando o usuário arrasta um card sobre outro
+  function dragOver(e) {
+    e.preventDefault();
+  }
 
-    // Função chamada quando o usuário solta um card em outro
-    function dragDrop(e) {
-         var id = e.dataTransfer.getData('text');
-        var card = document.getElementById(id);
-        e.target.parentNode.insertBefore(card, e.target);
-    }
+  // Função chamada quando o usuário solta um card em outro
+  function dragDrop(e) {
+    var id = e.dataTransfer.getData('text');
+    var card = document.getElementById(id);
+    e.target.parentNode.insertBefore(card, e.target);
+  }
 </script>
 
 
