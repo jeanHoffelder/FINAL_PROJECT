@@ -4,7 +4,7 @@ if(isset($_POST['botao'])){
     $a = new Atleta($_POST['email']);
     $a->setSenha($_POST['password']);
     if($a->authenticate()){
-        header("location: restrita.php");
+        header("location: telaTime.php");
     }else{
         header("location: index.php");
     }

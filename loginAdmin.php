@@ -4,7 +4,7 @@ if(isset($_POST['botao'])){
     $admin = new Administrador($_POST['email']);
     $admin->setSenha($_POST['senha']);
     if($admin->authenticate()){
-        header("location: restritaAdmin.php");
+        header("location: telaTime.php");
     }else{
         header("location: index.php");
     }

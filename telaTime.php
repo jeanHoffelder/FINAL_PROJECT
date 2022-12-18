@@ -1,6 +1,13 @@
 <?php
 require_once __DIR__."/vendor/autoload.php";
 $atletas = Atleta::findall(); 
+
+session_start();
+if(!isset($_SESSION['id'])){
+    header("location:index.php");
+}
+
+
 ?>
 <html>
 <head>
