@@ -68,6 +68,7 @@ if(isset($_POST['botao'])){
         </select>
         <br>
         Photo:<br> <input name='foto' type='file' required>
+        
         <br>
         <br>
         <input type='submit' name='botao' value='Sign Up'>

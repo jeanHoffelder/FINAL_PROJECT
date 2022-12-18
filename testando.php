@@ -55,7 +55,7 @@ foreach($atletas as $atleta){
     $posicao = $atleta->getPosicao();
     $idade = calcularIdade($atleta->getData_nasc());
     $turma = $atleta->getTurma();
-    
+
     echo '<div class="card">';
     echo '  <img src="atleta.jpg" alt="Foto do atleta">';
     echo '  <h1>' . $nome . '</h1>';
@@ -64,7 +64,10 @@ foreach($atletas as $atleta){
     echo '  <p>Turma: ' . $turma . '</p>';
     echo '</div>';
 }
+
 ?>
 
+</script>
+</script>
 </body>
 </html>
