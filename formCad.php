@@ -7,9 +7,10 @@ if(isset($_POST['botao'])){
     $atleta->setTurma($_POST['turma']);
     $atleta->setAltura($_POST['altura']);
     $atleta->setPosicao($_POST['posicao']);
-    $atleta->setFoto($_POST['foto']);
+    $atleta->setFoto($_FILES['foto']['name']);
     $atleta->setSenha($_POST['senha']);
     $atleta->setSexo($_POST['sexo']);
+
     $atleta->save();
     header("location: index.php");
 }
@@ -27,8 +28,8 @@ if(isset($_POST['botao'])){
 <body>
     <a href='index.php'>Back</a>
     <h1>FILL IN THE FOLLOWING INFO</h1>
-    <form action='formCad.php' method='POST'>
-        Name:<br> <input name='nome' type='text' placeholder='Ex.: Thaciano' required>
+    <form action='formCad.php' method='POST' enctype="multipart/form-data">
+        Name:<br> <input name='nome' type='text' placeholder='Ex.: Lionel Messi' required>
         <br>
         E-mail:<br> <input name='email' type='email' placeholder='thaciano@gmail.com' required>
         <br>
@@ -52,7 +53,7 @@ if(isset($_POST['botao'])){
             <option value='tma4'>4° ano - Técnico em Meio Ambiente</option>
         </select>
         <br>
-        Height:<br> <input name='altura' type='number' maxLength='3' placeholder='Ex.: 180' required>
+        Height:<br> <input name='altura' type='number' maxLength='3' min='100' max='310' placeholder='Ex.: 180' required>
         <br>
         Favorite Position:<br> <select name='posicao'>
             <option value='goleiro'>Goalkeeper</option>
@@ -67,7 +68,7 @@ if(isset($_POST['botao'])){
             <option value='f'>F</option>
         </select>
         <br>
-        Photo:<br> <input name='foto' type='file' required>
+        Photo:<br><input type='file' name='foto' id='foto' required>
         
         <br>
         <br>

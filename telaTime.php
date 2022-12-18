@@ -59,6 +59,7 @@ function calcularIdade($data){
 echo "<div id='container'>";
 
 foreach($atletas as $atleta){
+  $foto = $atleta->getFoto();
   $nome = $atleta->getNome();
   $posicao = $atleta->getPosicao();
   $idade = calcularIdade($atleta->getData_nasc());
@@ -67,7 +68,7 @@ foreach($atletas as $atleta){
   
   echo "<div class='card' draggable='true' id=$id>";
     echo "<div class='elementos_card'>";
-      echo "<img src='atleta.jpg' alt='Foto do atleta'>";
+      echo " <img width=150px src={$foto}>";
       echo "<h1> $nome </h1>";
       echo "<p>Posição: $posicao </p>";
       echo "<p>Idade: $idade anos</p>";
