@@ -140,7 +140,7 @@ echo "</div>";
 
 <br>
 <br>
-<h1>DRAG PLAYERS' CARDS</h1>
+<h1>CHOOSE PLAYER'S CARDS</h1>
     <div class='container2'>
       <form action="telaTime.php" method='POST'>
 
