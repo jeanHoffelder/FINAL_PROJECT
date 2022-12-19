@@ -27,8 +27,7 @@ $atleta = Atleta::find($_SESSION['id']);
     <a href='sair.php'> <button class='botao'>logout</button></a>
     </header>
     <br>
-    <h1>You haven't been cast yet!</h1>
-    <br>
+    
 
     <head>
   <style>
