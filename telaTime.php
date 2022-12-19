@@ -7,6 +7,12 @@ if(!isset($_SESSION['id'])){
     header("location:index.php");
 }
 
+<<<<<<< HEAD
+if (isset($_SESSION['blocked_user_id']) && $_SESSION['blocked_user_id'] == $user_id) {
+  // Exiba uma mensagem informando que o usuário não tem permissão para realizar essa ação
+  echo 'Você não tem permissão para realizar essa ação.';
+}
+=======
 
 // //php de criação para o time
 // //jogador1 = $this.idAtleta algo assim
@@ -29,6 +35,7 @@ if(isset($_POST['botao'])){
 
 
 
+>>>>>>> 50cde5034160fcc31db290fc4ee26dffcd150af2
 ?>
 <html>
 <head>
