@@ -10,15 +10,25 @@
 
         Name Team: <input name='nome' placeholder='Ex: gremio' required>
         <br>
-        Goalkeeper: <input name='goleiro' placeholder='drop desired player here' required>
+        <div class="goalkeeper">
+          <input name='goleiro' placeholder='drop desired player here' required>
+        </div>  
         <br>
-        Fixed: <input name='fixo' placeholder='drop desired player here' required>
+        <div class="fixed">
+          Fixed: <input name='fixo' placeholder='drop desired player here' required>
+        </div>
         <br>
-        Right-Wing: <input name='ala_dir' placeholder='drop desired player here' required>
+        <div class="rightwing">
+          Right-Wing: <input name='ala_dir' placeholder='drop desired player here' required>
+        </div>
         <br>
-        Left-Wing: <input name='ala_esq' placeholder='drop desired player here' required>
+        <div class="leftwing">
+          Left-Wing: <input name='ala_esq' placeholder='drop desired player here' required>
+        </div>
         <br>
-        Target: <input name='pivo' placeholder='drop desired player here' required>
+        <div class="target">
+          Target: <input name='pivo' placeholder='drop desired player here' required>
+        </div>
         <br>
         First Reserve: <input name='reserva1' placeholder='drop desired player here' required>
         <br>

@@ -2,14 +2,8 @@ body{
     display:grid;
 }
 
-
-
-.container{
-    
-}
-
-.container2{
-}
-
-.containerfh1{
+.goalkeeper{
+    top: 50%;
+    left: 76%;
+    position: absolute;
 }
