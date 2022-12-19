@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 07-Dez-2022 às 13:30
+-- Tempo de geração: 19-Dez-2022 às 12:43
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.0.15
 
@@ -33,6 +33,13 @@ CREATE TABLE `administrador` (
   `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Extraindo dados da tabela `administrador`
+--
+
+INSERT INTO `administrador` (`email`, `senha`, `id`) VALUES
+('admin@admin.com', 'admin', 4);
+
 -- --------------------------------------------------------
 
 --
@@ -58,7 +65,16 @@ CREATE TABLE `atletas` (
 --
 
 INSERT INTO `atletas` (`nome`, `data_nasc`, `turma`, `altura`, `posicao`, `foto`, `email`, `senha`, `id`, `sexo`, `Jogaem`) VALUES
-('Otávio João Maldaner', '2022-12-01', 'ti1', 188, 'goleiro', 'Foto_Oficial_Lula_BG_Branco-3.jpg', 'a@a.com', '$2y$10$BlpavPghfAkwb38Sf/A7GOSAAi5GSVOEclEi.MLd2xsctziHaY/zS', 11, 'm', NULL);
+('Messi', '1986-07-25', 'tq1', 160, 'pivo', 'fotos/63a04b9aef3a3.webp', 'Messi@atleta.com', '$2y$10$1apXVIXO0qHjseJYYYA9X.i9j9HYJTtiObuwwqE1zb8bIAOhrpGR.', 14, 'm', NULL),
+('Di Maria', '1991-06-19', 'tq2', 190, 'goleiro', 'fotos/63a04bc90df54.webp', 'maria@atleta.com', '$2y$10$0ElCtG8IOa3EFTZD46ruwewXzWQ3TQzHBbjk0mCUX22/NoDyrHZim', 15, 'm', NULL),
+('Alexis', '1990-06-13', 'ti3', 170, 'alaDireita', 'fotos/63a04c0d53fa3.jpg', 'alexis@atleta.com', '$2y$10$6v/XCsUV03/.lHNzBmmoa.HxGDt4bVxdv.pep.3G9mGwHepnxaaLq', 16, 'm', NULL),
+('Emiliano', '1990-10-10', 'ti4', 175, 'goleiro', 'fotos/63a04c455de92.jpg', 'Emiliano@atleta.com', '$2y$10$kN9kEWOv/l287uIG1NLlcuXXVYeQxigl9faT3cFa0XLBKMFkE8F1e', 17, 'm', NULL),
+('Enzo Fernández', '2000-12-15', 'tma2', 180, 'alaDireita', 'fotos/63a04c7e26e00.jpg', 'enzo@atleta.com', '$2y$10$CoEh1KUQTNSR/zIpnPwHPOJlgTZXnKZyqeRI5gAhioD2MnNmWFyze', 18, 'm', NULL),
+('matias', '1992-02-15', 'tma3', 176, 'alaDireita', 'fotos/63a04caa6a128.webp', 'matias@atleta.com', '$2y$10$/w7EkwLW91v1hjC8wTYwcewaPucnmFeMNhFDXtJ57kDOVFKAvCAvy', 19, 'm', NULL),
+('Lautaro', '1993-10-05', 'ti4', 169, 'alaEsquerda', 'fotos/63a04cdabd576.jpg', 'lautaro@atleta.com', '$2y$10$EOzuOY4pdgLedBmJ5qobfeH2jn1XVVR8PRZOwMzlMMVmo8RPy0RQ.', 20, 'm', NULL),
+('Lissandro', '1989-06-15', 'tma1', 178, 'pivo', 'fotos/63a04d0ace7c8.jpg', 'lissandro@atleta.com', '$2y$10$vCYmS5oA1RDJaPACVkfd9uMRSnwTfHrawc.VGrhRVpiTTM1XDACB.', 21, 'm', NULL),
+('Dybala', '1997-06-15', 'tq4', 169, 'alaEsquerda', 'fotos/63a04d3b00003.jpg', 'dybala@atleta.com', '$2y$10$iEYRUofS2b4HuP.24qcTrufgqlXYNrqxF1/nBbw.fABkbt4zoJGmy', 22, 'm', NULL),
+('Rodrigo', '1989-09-15', 'tma3', 188, 'alaEsquerda', 'fotos/63a04d65a567c.jpg', 'rodrigo@atleta.com', '$2y$10$VD9Bi0/9Gz74xlmUJ/let.eeNjb74lUgoIgp6RplLx2n3foJkZ8Zi', 23, 'm', NULL);
 
 -- --------------------------------------------------------
 
@@ -74,20 +90,12 @@ CREATE TABLE `time` (
   `id_alaDireita` int(11) DEFAULT NULL,
   `id_alaEsquerda` int(11) DEFAULT NULL,
   `id_Pivo` int(11) DEFAULT NULL,
-  `id_reseva1` int(11) DEFAULT NULL,
-  `id_reseva2` int(11) DEFAULT NULL,
-  `id_reseva3` int(11) DEFAULT NULL,
-  `id_reseva4` int(11) DEFAULT NULL,
-  `id_reseva5` int(11) DEFAULT NULL
+  `id_reserva1` int(11) DEFAULT NULL,
+  `id_reserva2` int(11) DEFAULT NULL,
+  `id_reserva3` int(11) DEFAULT NULL,
+  `id_reserva4` int(11) DEFAULT NULL,
+  `id_reserva5` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `time`
---
-
-INSERT INTO `time` (`idTime`, `nome_time`, `id_goleiro`, `id_fixo`, `id_alaDireita`, `id_alaEsquerda`, `id_Pivo`, `id_reseva1`, `id_reseva2`, `id_reseva3`, `id_reseva4`, `id_reseva5`) VALUES
-(2, 'time1', 11, 11, 11, 11, 11, 11, 11, 11, 11, 11),
-(4, '', 11, 11, 11, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Índices para tabelas despejadas
@@ -116,11 +124,11 @@ ALTER TABLE `time`
   ADD KEY `fkalaDireita` (`id_alaDireita`),
   ADD KEY `fkalaEsquerda` (`id_alaEsquerda`),
   ADD KEY `fkpivo` (`id_Pivo`),
-  ADD KEY `fkres1` (`id_reseva1`),
-  ADD KEY `fkres2` (`id_reseva2`),
-  ADD KEY `fkres3` (`id_reseva3`),
-  ADD KEY `fkres4` (`id_reseva4`),
-  ADD KEY `fkres5` (`id_reseva5`);
+  ADD KEY `fkres1` (`id_reserva1`),
+  ADD KEY `fkres2` (`id_reserva2`),
+  ADD KEY `fkres3` (`id_reserva3`),
+  ADD KEY `fkres4` (`id_reserva4`),
+  ADD KEY `fkres5` (`id_reserva5`);
 
 --
 -- AUTO_INCREMENT de tabelas despejadas
@@ -130,19 +138,19 @@ ALTER TABLE `time`
 -- AUTO_INCREMENT de tabela `administrador`
 --
 ALTER TABLE `administrador`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `atletas`
 --
 ALTER TABLE `atletas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT de tabela `time`
 --
 ALTER TABLE `time`
-  MODIFY `idTime` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `idTime` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Restrições para despejos de tabelas
@@ -163,11 +171,11 @@ ALTER TABLE `time`
   ADD CONSTRAINT `fkfixo` FOREIGN KEY (`id_fixo`) REFERENCES `atletas` (`id`),
   ADD CONSTRAINT `fkgoleiro` FOREIGN KEY (`id_goleiro`) REFERENCES `atletas` (`id`),
   ADD CONSTRAINT `fkpivo` FOREIGN KEY (`id_Pivo`) REFERENCES `atletas` (`id`),
-  ADD CONSTRAINT `fkres1` FOREIGN KEY (`id_reseva1`) REFERENCES `atletas` (`id`),
-  ADD CONSTRAINT `fkres2` FOREIGN KEY (`id_reseva2`) REFERENCES `atletas` (`id`),
-  ADD CONSTRAINT `fkres3` FOREIGN KEY (`id_reseva3`) REFERENCES `atletas` (`id`),
-  ADD CONSTRAINT `fkres4` FOREIGN KEY (`id_reseva4`) REFERENCES `atletas` (`id`),
-  ADD CONSTRAINT `fkres5` FOREIGN KEY (`id_reseva5`) REFERENCES `atletas` (`id`);
+  ADD CONSTRAINT `fkres1` FOREIGN KEY (`id_reserva1`) REFERENCES `atletas` (`id`),
+  ADD CONSTRAINT `fkres2` FOREIGN KEY (`id_reserva2`) REFERENCES `atletas` (`id`),
+  ADD CONSTRAINT `fkres3` FOREIGN KEY (`id_reserva3`) REFERENCES `atletas` (`id`),
+  ADD CONSTRAINT `fkres4` FOREIGN KEY (`id_reserva4`) REFERENCES `atletas` (`id`),
+  ADD CONSTRAINT `fkres5` FOREIGN KEY (`id_reserva5`) REFERENCES `atletas` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
