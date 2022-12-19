@@ -44,7 +44,7 @@ if(isset($_POST['botao'])){
         ?>
         <br>
         <?php
-            echo "Height: <input name='altura' value='{$atleta->getAltura()}' type='number' maxLenght='3' required>";
+            echo "Height: <input name='altura' value='{$atleta->getAltura()}' type='number' maxLenght='3' min='100' max='310' required>";
         ?>
         <br>
         <?php

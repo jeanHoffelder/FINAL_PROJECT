@@ -31,7 +31,7 @@ if(isset($_POST['botao'])){
     <form action='formCad.php' method='POST' enctype="multipart/form-data">
         Name:<br> <input name='nome' type='text' placeholder='Ex.: Lionel Messi' required>
         <br>
-        E-mail:<br> <input name='email' type='email' placeholder='thaciano@gmail.com' required>
+        E-mail:<br> <input name='email' type='email' placeholder='Lionelzinho123@gmail.com' required>
         <br>
         Password:<br> <input name='senha' type='password' placeholder='*****' required>
         <br>
