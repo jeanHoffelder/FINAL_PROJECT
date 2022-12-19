@@ -139,7 +139,8 @@ echo "</div>";
 
     <div class='container2'>
       <form action="telaTime.php" method='POST'>
-        nome do time: <input name='nome' type='text' placeholder='Ex: gremio' required>
+        <br>
+        <label for="nome">nome team</label> <input name='nome' type='text' placeholder='Ex: gremio' required>
         <br>
         Goleiro: <input name='goleiro' required>
         <br>
