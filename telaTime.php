@@ -100,9 +100,9 @@ foreach($atletas as $atleta){
     echo "<div class='elementos_card'>";
       echo " <img width=150px src={$foto}>";
       echo "<h1> $nome </h1>";
-      echo "<p>Posição: $posicao </p>";
-      echo "<p>Idade: $idade anos</p>";
-      echo "<p>Turma: $turma </p>";
+      echo "<p>Favorite Position: $posicao </p>";
+      echo "<p>age: $idade y.o</p>";
+      echo "<p>group: $turma </p>";
     echo "</div>";
   echo "</div>";
 } 

@@ -39,28 +39,28 @@ if(isset($_POST['botao'])){
         <br>
         Group:<br>
         <select name='turma'> 
-            <option value='ti1'>1° ano - Técnico em Informática</option>
-            <option value='ti2'>2° ano - Técnico em Informática</option>
-            <option value='ti3'>3° ano - Técnico em Informática</option>
-            <option value='ti4'>4° ano - Técnico em Informática</option>
-            <option value='tq1'>1° ano - Técnico em Química</option>
-            <option value='tq2'>2° ano - Técnico em Química</option>
-            <option value='tq3'>3° ano - Técnico em Química</option>
-            <option value='tq4'>4° ano - Técnico em Química</option>
-            <option value='tma1'>1° ano - Técnico em Meio Ambiente</option>
-            <option value='tma2'>2° ano - Técnico em Meio Ambiente</option>
-            <option value='tma3'>3° ano - Técnico em Meio Ambiente</option>
-            <option value='tma4'>4° ano - Técnico em Meio Ambiente</option>
+            <option value='1° year - Computer Technician'>1° year - Computer Technician</option>
+            <option value='2° year - Computer Technician'>2° year - Computer Technician</option>
+            <option value='3° year - Computer Technician'>3° year - Computer Technician</option>
+            <option value='4° year - Computer Technician'>4° year - Computer Technician</option>
+            <option value='1° year - Técnico em Química'>1° year - Chemistry Technician</option>
+            <option value='2° year - Chemistry Technician'>2° year - Chemistry Technician</option>
+            <option value='3° year - Chemistry Technician'>3° year - Chemistry Technician</option>
+            <option value='4° year - Chemistry Technician'>4° year - Chemistry Technician</option>
+            <option value='1° year - Environmental technician'>1° year - Environmental technician</option>
+            <option value='2° year - Environmental technician'>2° year - Environmental technician</option>
+            <option value='3° year - Environmental technician'>3° year - Environmental technician</option>
+            <option value='4° year - Environmental technician'>4° year - Environmental technician</option>
         </select>
         <br>
         Height:<br> <input name='altura' type='number' maxLength='3' min='100' max='310' placeholder='Ex.: 180' required>
         <br>
         Favorite Position:<br> <select name='posicao'>
-            <option value='goleiro'>Goalkeeper</option>
-            <option value='fixo'>Fixed</option>
-            <option value='alaDireita'>Right-Wing</option>
-            <option value='alaEsquerda'>Left-Wing</option>
-            <option value='pivo'>Target</option>
+            <option value='Goalkeeper'>Goalkeeper</option>
+            <option value='Fixed'>Fixed</option>
+            <option value='Right-Wing'>Right-Wing</option>
+            <option value='Left-Wing'>Left-Wing</option>
+            <option value='Target'>Target</option>
         </select>
         <br>
         Gender:<br> <select name='sexo'>
