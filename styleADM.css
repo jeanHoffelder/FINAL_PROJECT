@@ -1,36 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
 
 /*=============  Geral  =============*/
-*{
-    box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
-}
+
 body{
     background-color: #382F26;
     color: #5aa166;
     font-family: 'Noto Sans', sans-serif;
-    width: 100%;
+    width: max-content;
     text-align: center;
+    align-items: center;
     margin: 0 auto; 
 }
-header{
-    background-color: #469653;
-    color: white;
-    width: 100%;
-    box-sizing: content-box;
-    height: 170px;
-
-}
-.logo{
-    display: block;
-    margin: 0 auto; 
-}
-
-.quadra{
-    width: auto;
-}
-
 
 input[type=button], input[type=submit], input[type=reset]{
     background-color: #5aa166;
@@ -54,13 +34,9 @@ input[type=submit]{
 
 .botao{
     border: none;
-    background-color: #66c776;
+    background-color: #5aa166;
     color: #ffffff;
-    font-weight:bold;
-    padding: 2%;
-    width: 100px;
-    height: 50px;
-
+    font-weight:bold
 }
 
 a, a:hover, a:focus, a:active {
@@ -175,7 +151,7 @@ label{
     }
     
     input[type=email], input[type=password], input[type=text], input[type=date], input[type=number], select{
-        width: 60%;
+        width: 85%;
         padding: 3px 5px;
         margin: 3px 2px;
         font-size: 20px;
@@ -194,7 +170,8 @@ label{
 
     .botao,a,a:hover, a:focus, a:active {
         margin: auto;
-        width: 150px;
+        padding: 2%;
+        width: 60%;
     }
 
     label{

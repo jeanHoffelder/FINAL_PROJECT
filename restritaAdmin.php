@@ -7,6 +7,7 @@ if(!isset($_SESSION['id'])){
 require_once __DIR__."/vendor/autoload.php";
 
 $atletas = Atleta::findall();
+$times = Time::findall();
 
 ?>
 <!DOCTYPE html>
@@ -15,12 +16,29 @@ $atletas = Atleta::findall();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleRestritaadm.css" />
     <title>Admin Page</title>
 </head>
 <body>
-<img src="logo.png" alt="">
-    <h1>Seja bem vindo Administrador</h1>
-    <a href='sair.php'>Logout</a>
+<header>
+        <?php echo "<h2>Welcome, Administrator</h2>"?>
+    <a href='sair.php'> <button class='botao'>logout</button></a>
+    </header>
+    <br>
+    <a href="telaTime.php"><button class='botao'>Create a new Team</button></a>
+    <br>
+    <?php
+    foreach(times as time)
+    <table border="1" cellpadding="10" cellspacing="0">
+    <tr>
+        <td></td>
+
+    </tr>
+
+
+    </table>
+
+
 
 </body>
 </html>

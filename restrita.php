@@ -21,13 +21,16 @@ $atletas = Atleta::findall();
 <body>
     <header>
         <?php echo "<h2>Welcome,  {$_SESSION['nome']} </h2>"?>
-
     <?php
-    echo "<a href=formEdit.php?id={$_SESSION['id']}>   <button>edit profile</button> </a>";
+    echo "<a href=formEdit.php?id={$_SESSION['id']}>   <button  class='botao'>edit profile</button> </a>";
     ?>
     <a href='sair.php'> <button class='botao'>logout</button></a>
     </header>
     <br>
     <h1>You haven't been cast yet!</h1>
+    <?php
+    // echo Atleta::qualtime();
+
+    ?>
 </body>
 </html>

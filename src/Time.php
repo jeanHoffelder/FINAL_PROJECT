@@ -119,6 +119,7 @@ class Time implements ActiveRecord{
         return $conexao->executa($sql);
     }
 
+
     public static function find($id):Time{
         $conexao = new MySQL();
         $sql = "SELECT * FROM time WHERE id = {$id}";
@@ -133,8 +134,8 @@ class Time implements ActiveRecord{
         $resultados = $conexao->consulta($sql);
         $time = array();
         foreach($resultados as $resultado){
-            $p = new Time($resultado[0]['nome_time'],$resultado[0]['id_goleiro'],$resultado[0]['id_fixo'],$resultado[0]['id_alaDireita'],$resultado[0]['id_alaEsquerda'],$resultado[0]['id_Pivo'],$resultado[0]['id_reserva1'],$resultado[0]['id_reserva2'],$resultado[0]['id_reserva3'],$resultado[0]['id_reserva4'],$resultado[0]['id_reserva5']);
-            $p->setId($resultado['id']);
+            $p = new Time($resultado['nome_time'],$resultado['id_goleiro'],$resultado['id_fixo'],$resultado['id_alaDireita'],$resultado['id_alaEsquerda'],$resultado['id_Pivo'],$resultado['id_reserva1'],$resultado['id_reserva2'],$resultado['id_reserva3'],$resultado['id_reserva4'],$resultado['id_reserva5']);
+            $p->setId($resultado['idTime']);
             $time[] = $p;
         }
         return $time;

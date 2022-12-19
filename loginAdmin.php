@@ -4,7 +4,7 @@ if(isset($_POST['botao'])){
     $admin = new Administrador($_POST['email']);
     $admin->setSenha($_POST['senha']);
     if($admin->authenticate()){
-        header("location: telaTime.php");
+        header("location: restritaAdmin.php");
     }else{
         header("location: index.php");
     }
@@ -16,14 +16,13 @@ if(isset($_POST['botao'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="styleIndexAdm.css" />
+    <link rel="stylesheet" href="styleADM.css" />
     <title>Admin</title>
 </head>
 <body>
-    <a href='index.php'>Back</a> 
+    <a href='index.php'><button class='botao'>Back</button></a> 
     <form action='LoginAdmin.php' method='POST'>
-        E-mail:<br> <input name='email' type='email' placeholder='thaciano@gmail.com' required>
+        E-mail:<br> <input name='email' type='email' placeholder='lionelzinho@gmail.com' required>
         <br>
         Password:<br> <input name='senha' type='password' placeholder='*****' required>
         <br>

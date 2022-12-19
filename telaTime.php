@@ -17,7 +17,7 @@ if(isset($_POST['botao'])){
   require_once __DIR__."/vendor/autoload.php";
   $time = new Time($_POST['nome'],$_POST['goleiro'],$_POST['fixo'],$_POST['ala_dir'],$_POST['ala_esq'],$_POST['pivo'],$_POST['reserva1'],$_POST['reserva2'],$_POST['reserva3'],$_POST['reserva4'],$_POST['reserva5']);
   $time->save();
-  header("location: index.php");
+  header("location: restritaAdmin.php");
 }
 
 

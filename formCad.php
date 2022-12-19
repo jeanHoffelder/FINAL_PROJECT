@@ -26,7 +26,7 @@ if(isset($_POST['botao'])){
     <title>Sign Up</title>
 </head>
 <body>
-    <a href='index.php'>Back</a>
+    <a href='index.php'> <button class='botao'>Back</button></a>
     <h1>FILL IN THE FOLLOWING INFO</h1>
     <form action='formCad.php' method='POST' enctype="multipart/form-data">
         Name:<br> <input name='nome' type='text' placeholder='Ex.: Lionel Messi' required>

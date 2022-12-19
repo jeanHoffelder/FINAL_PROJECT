@@ -176,5 +176,15 @@ class Atleta implements ActiveRecord{
         }
     }
 
-    
+
+    public static function qualtime(){
+        $conexao = new MySQL();
+        $sql = "SELECT DISTINCT nome_time FROM time, atletas WHERE id=time.id_goleiro or id=time.id_fixo or id=time.id_alaDireita or id=time.id_alaEsquerda or id=time.id_Pivo or id=time.id_reserva1 or id=time.id_reserva2 or id=time.id_reserva3 or id=time.id_reserva4 or id=time.id_reserva5";
+        $resultados = $conexao->consulta($sql);
+        return $resultados;
+        foreach($resultados as $resultado){
+            $nome = $resultado['nome_time'];
+    }
+    return $nome;
+}
 }

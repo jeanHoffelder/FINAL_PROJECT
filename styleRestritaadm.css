@@ -59,7 +59,7 @@ input[type=submit]{
     font-weight:bold;
     padding: 2%;
     width: 100px;
-    height: 50px;
+    height: 80px;
 
 }
 
@@ -72,6 +72,7 @@ label{
     color: white;
     font-weight: bold;
 }
+
 
 /*=============  Celular  =============*/
 @media screen and (max-width: 601px) {
