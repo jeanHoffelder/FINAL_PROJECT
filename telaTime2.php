@@ -35,6 +35,8 @@
       </form>
     </div>
     <a href="restritaAdmin.php"><button class='botao'>Cancel</button></a>
+
+    <div class="formation-manager__drop-target"><div class="formation-slot formation-slot--interactive"><div class="formation-slot__card"><div class="empty-card"></div><div class="card-pedestal"><div class="card-pedestal__background"><div class="card-pedestal__background-bonus-div"></div></div><div class="card-pedestal__label">CM</div><div class="card-pedestal__spinny-arrow"><svg class="arrow-circle" width="100" height="100" viewBox="0 0 100 100"><g class="arrow-circle__top-arrow"><path d="M 20 40 A 31 31, 0, 0, 1, 80 40" fill="none" stroke="red" stroke-linecap="round" stroke-width="10"></path><path d="M 68 33 l 12 7 l 2 -13" fill="none" stroke="red" stroke-linecap="round" stroke-width="10"></path></g><g class="arrow-circle__bottom-arrow"><path d="M 20 60 A 31 31, 0, 0, 0, 80 60" fill="none" stroke="red" stroke-linecap="round" stroke-width="10"></path><path d="M 32 67 l -12 -7 l -2 13" fill="none" stroke="red" stroke-linecap="round" stroke-width="10"></path></g></svg></div></div></div></div></div>
 </div>
 </body>
 </html>
