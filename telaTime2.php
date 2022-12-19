@@ -1,4 +1,7 @@
 <html>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="styletelaTime.css" />
+<body>
 <div class='containerfh1'>
   <img src="Campofutsal.png" alt="">
   <h1>DRAG PLAYERS' CARDS</h1>
