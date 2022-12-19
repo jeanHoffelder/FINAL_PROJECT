@@ -26,6 +26,14 @@ if(isset($_POST['botao'])){
 ?>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="formCad.css" />
+    <title>Create a Team</title>
+</head>
+<head>
   <style>
     .card{
         width: 300px;
@@ -129,33 +137,35 @@ echo "</div>";
   }
 </script>
 
-<br>
 
+<br>
+<br>
+<h1>DRAG PLAYERS' CARDS</h1>
     <div class='container2'>
       <form action="telaTime.php" method='POST'>
-        <br>
-        <label for="nome">nome team</label> <input name='nome' type='text' placeholder='Ex: gremio' required>
-        <br>
-        Goleiro: <input name='goleiro' required>
-        <br>
-        Fixo: <input name='fixo' required>
-        <br>
-        Ala Direita: <input name='ala_dir' required>
-        <br>
-        Ala Esquerda: <input name='ala_esq' required>
-        <br>
-        Pivo: <input name='pivo' required>
-        <br>
-        Primeiro Reserva: <input name='reserva1' required>
-        <br>
-        Segundo Reserva: <input name='reserva2' required>
-        <br>
-        Terceiro Reserva: <input name='reserva3' required>
-        <br>
-        Quarto Reserva: <input name='reserva4' required>
-        <br>
-        Quinto Reserva: <input name='reserva5' required>
 
+        Name Team: <input name='nome' placeholder='Ex: gremio' required>
+        <br>
+        Goalkeeper: <input name='goleiro' placeholder='drop desired player here' required>
+        <br>
+        Fixed: <input name='fixo' placeholder='drop desired player here' required>
+        <br>
+        Right-Wing: <input name='ala_dir' placeholder='drop desired player here' required>
+        <br>
+        Left-Wing: <input name='ala_esq' placeholder='drop desired player here' required>
+        <br>
+        Target: <input name='pivo' placeholder='drop desired player here' required>
+        <br>
+        First Reserve: <input name='reserva1' placeholder='drop desired player here' required>
+        <br>
+        Second Reserve: <input name='reserva2' placeholder='drop desired player here' required>
+        <br>
+        third Reserve: <input name='reserva3' placeholder='drop desired player here' required>
+        <br>
+        fourth Reserve: <input name='reserva4' placeholder='drop desired player here' required>
+        <br>
+        fifth Reserve: <input name='reserva5' placeholder='drop desired player here' required>
+        <br>
 
         <input type='submit' name='botao' value='create team'>
       </form>
