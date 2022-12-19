@@ -25,6 +25,3 @@ logout e outro botão para editar seu perfil.
 Contribuição:
 Se você encontrar um bug ou deseja sugerir uma nova funcionalidade, por favor envie um e-mail para qualquer um de nós falando sobre (<jean.hoffelder@aluno.feliz.ifrs.edu.br>, <marcelo.ost@aluno.feliz.ifrs.edu.br>
 ou <marcelo.dalcin@aluno.feliz.ifrs.edu.br>) ou envie um pull request com as suas alterações.
-
-Licença:
-Este projeto está disponível sob a licença MIT. Isso significa que você pode usá-lo livremente para qualquer finalidade, comercial ou não comercial, desde que inclua um aviso de copyright e licença nas suas cópias.
