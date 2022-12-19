@@ -1,6 +1,6 @@
 <?php
     define("HOST","localhost");
-    define("USUARIO","root");
-    define("SENHA","");
+    define("USUARIO","aluno");
+    define("SENHA","aluno");
     define("BANCO","brasfootif");
 ?>
