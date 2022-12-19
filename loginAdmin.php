@@ -6,7 +6,7 @@ if(isset($_POST['botao'])){
     if($admin->authenticate()){
         header("location: restritaAdmin.php");
     }else{
-        header("location: index.php");
+        header("location: loginAdmin.php");
     }
 }
 ?>
