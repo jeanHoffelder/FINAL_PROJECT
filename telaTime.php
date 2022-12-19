@@ -12,16 +12,6 @@ if (isset($_SESSION['blocked_user_id']) && $_SESSION['blocked_user_id'] == $user
   echo 'Você não tem permissão para realizar essa ação.';
 };
 
-// //php de criação para o time
-// //jogador1 = $this.idAtleta algo assim
-
-
-// public function __construct(private string $nome_time,private int $id_goleiro,
-//  private int $id_fixo, private int $id_alaDireita, private int $id_alaEsquerda, private int $id_Pivo, 
-//  private int $id_reserva1, private int $id_reserva2, private int $id_reserva3, private int $id_reserva4, 
-//  private int $id_reserva5){
-// }
-
 
 if(isset($_POST['botao'])){
   require_once __DIR__."/vendor/autoload.php";
