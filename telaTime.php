@@ -30,7 +30,7 @@ if(isset($_POST['botao'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="formCad.css" />
+    <link rel="stylesheet" href="styletelaTime.css" />
     <title>Create a Team</title>
 </head>
 <head>
@@ -140,7 +140,9 @@ echo "</div>";
 
 <br>
 <br>
-<h1>DRAG PLAYERS' CARDS</h1>
+<div class='containerfh1'>
+  <img src="Campofutsal.png" alt="">
+  <h1>DRAG PLAYERS' CARDS</h1>
     <div class='container2'>
       <form action="telaTime.php" method='POST'>
 
@@ -170,6 +172,7 @@ echo "</div>";
         <input type='submit' name='botao' value='create team'>
       </form>
     </div>
-        <a href="restritaAdmin.php"><button class='botao'>Cancel</button></a>
+    <a href="restritaAdmin.php"><button class='botao'>Cancel</button></a>
+</div>
 </body>
 </html>
