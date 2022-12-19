@@ -8,7 +8,7 @@ class Atleta implements ActiveRecord{
     private string $turma;
     private string $altura;
     private string $posicao;
-    private string $foto;
+    private $foto;
     private string $senha;
     private string $sexo;
     
@@ -43,7 +43,7 @@ class Atleta implements ActiveRecord{
         $this->posicao = $posicao;
     }
 
-    public function setFoto(string $foto):void{
+    public function setFoto($foto):void{
         $this->foto = $foto;
     }
 
@@ -99,6 +99,15 @@ class Atleta implements ActiveRecord{
     public function save():bool{
         $conexao = new MySQL();
         
+        $diretorio = __DIR__."/../fotos/";
+        $nome_foto = $this->foto;
+        $info_name = explode(".",$nome_foto);
+        $extensao = end($info_name);
+        $this->foto = uniqid().".".$extensao;
+        move_uploaded_file($_FILES["foto"]["tmp_name"], $diretorio.$this->foto);
+        $this->foto = "fotos/".$this->foto;
+
+    
         if(isset($this->id)){
             $sql = "UPDATE atletas SET nome = '{$this->nome}' ,data_nasc = '{$this->data_nasc}',altura = '{$this->altura}',foto = '{$this->foto}',email = '{$this->email}' WHERE id = {$this->id}";
         }else{
