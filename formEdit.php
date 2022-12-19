@@ -14,7 +14,6 @@ if(isset($_POST['botao'])){
     $atleta->setNome($_POST['nome']);
     $atleta->setData_nasc($_POST['data_nasc']);
     $atleta->setAltura($_POST['altura']);
-    $atleta->setFoto($_FILES['foto']['name']);
     $atleta->save();
     header("location: restrita.php");
 }
@@ -27,10 +26,10 @@ if(isset($_POST['botao'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="formCad.css" />
-    <title>Edita Atleta</title>
+    <title>Edit player</title>
 </head>
 <body>
-    <form action='formEdit.php' method='POST'>
+    <form action='formEdit.php' method='POST' enctype="multipart/form-data" >
         <br>
         <?php
             echo "E-mail: <input name='email' value={$atleta->getEmail()} type='email' required>";
@@ -47,10 +46,6 @@ if(isset($_POST['botao'])){
         <br>
         <?php
             echo "Height: <input name='altura' value='{$atleta->getAltura()}' type='number' maxLenght='3' min='100' max='310' required>";
-        ?>
-        <br>
-        <?php
-            echo "Photo: <input name='foto' value='{$atleta->getFoto()}' type='file' required>";
         ?>
         <br>
         

@@ -59,7 +59,7 @@ class Time implements ActiveRecord{
         $this->id_reserva5 = $id_reserva5;
     }
 
-    public function getNome_time():int{
+    public function getNome_time():String{
         return $this->nome_time;
     }
 

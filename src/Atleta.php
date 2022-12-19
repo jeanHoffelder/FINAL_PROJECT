@@ -109,7 +109,7 @@ class Atleta implements ActiveRecord{
 
     
         if(isset($this->id)){
-            $sql = "UPDATE atletas SET nome = '{$this->nome}' ,data_nasc = '{$this->data_nasc}',altura = '{$this->altura}',foto = '{$this->foto}',email = '{$this->email}' WHERE id = {$this->id}";
+            $sql = "UPDATE atletas SET nome = '{$this->nome}' ,data_nasc = '{$this->data_nasc}',altura = '{$this->altura}',email = '{$this->email}' WHERE id = {$this->id}";
         }else{
             $this->senha = password_hash($this->senha,PASSWORD_BCRYPT); 
             $sql = "INSERT INTO atletas (nome,data_nasc,turma,altura,posicao,foto,email,senha,sexo) VALUES ('{$this->nome}','{$this->data_nasc}','{$this->turma}','{$this->altura}','{$this->posicao}','{$this->foto}','{$this->email}','{$this->senha}','{$this->sexo}')";

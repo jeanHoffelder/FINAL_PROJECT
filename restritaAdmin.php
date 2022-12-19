@@ -27,16 +27,24 @@ $times = Time::findall();
     <br>
     <a href="telaTime.php"><button class='botao'>Create a new Team</button></a>
     <br>
-    <?php
-    foreach(times as time)
-    <table border="1" cellpadding="10" cellspacing="0">
+
+
+
+<table border="1" cellpadding="10" cellspacing="0">
     <tr>
-        <td></td>
-
+        <td>Team Name</td>
     </tr>
-
-
-    </table>
+    <?php
+    foreach($times as $time){
+        echo "<tr>";
+        echo "<td>{$time->getNome_time()}</td>";
+        // echo "<td>
+        //         <a href='excluir.php?id={$time->getId()}'>Delete</a> 
+        //      </td>";
+        echo "</tr>";
+    }
+    ?>
+</table>
 
 
 

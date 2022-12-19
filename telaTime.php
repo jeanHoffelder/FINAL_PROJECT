@@ -170,6 +170,6 @@ echo "</div>";
         <input type='submit' name='botao' value='create team'>
       </form>
     </div>
-
+        <a href="restritaAdmin.php"><button class='botao'>Cancel</button></a>
 </body>
 </html>
