@@ -7,7 +7,10 @@ if(!isset($_SESSION['id'])){
     header("location:index.php");
 }
 
-
+if (isset($_SESSION['blocked_user_id']) && $_SESSION['blocked_user_id'] == $user_id) {
+  // Exiba uma mensagem informando que o usuário não tem permissão para realizar essa ação
+  echo 'Você não tem permissão para realizar essa ação.';
+}
 ?>
 <html>
 <head>
