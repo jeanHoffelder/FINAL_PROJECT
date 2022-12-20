@@ -2,8 +2,10 @@
 <link rel="stylesheet" href="style.css" />
 <link rel="stylesheet" href="styletelaTime.css" />
 <body>
-<div class='containerfh1'>
-  <img src="Campofutsal.png" alt="">
+<div class='container1'>
+  <div class="campo">
+    <img src="Campofutsal.png" alt="">
+  </div>
   <h1>DRAG PLAYERS' CARDS</h1>
     <div class='container2'>
       <form action="telaTime.php" method='POST'>
@@ -15,19 +17,19 @@
         </div>  
         <br>
         <div class="fixed">
-          Fixed: <input name='fixo' placeholder='drop desired player here' required>
+          <input name='fixo' placeholder='drop desired player here' required>
         </div>
         <br>
         <div class="rightwing">
-          Right-Wing: <input name='ala_dir' placeholder='drop desired player here' required>
+          <input name='ala_dir' placeholder='drop desired player here' required>
         </div>
         <br>
         <div class="leftwing">
-          Left-Wing: <input name='ala_esq' placeholder='drop desired player here' required>
+          <input name='ala_esq' placeholder='drop desired player here' required>
         </div>
         <br>
         <div class="target">
-          Target: <input name='pivo' placeholder='drop desired player here' required>
+          <input name='pivo' placeholder='drop desired player here' required>
         </div>
         <br>
         First Reserve: <input name='reserva1' placeholder='drop desired player here' required>

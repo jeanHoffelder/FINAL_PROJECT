@@ -1,9 +1,42 @@
 body{
     display:grid;
+    font-size: 40px;
+}
+
+.container2{
+    position:absolute;
+}
+
+.campo img{ 
+    margin: auto;
 }
 
 .goalkeeper{
-    top: 50%;
-    left: 76%;
-    position: absolute;
+    top: -535px;
+    left: 855px;
+    position: relative;
+}
+
+.fixed{
+    top: -608px;
+    left: 655px;
+    position: relative;
+}
+
+.rightwing{
+    top: -850px;
+    left: 465px;
+    position: relative;
+}
+
+.leftwing{
+    top: -565px;
+    left: 465px;
+    position: relative;
+}
+
+.target{
+    top: -850px;
+    left: 165px;
+    position: relative;
 }
