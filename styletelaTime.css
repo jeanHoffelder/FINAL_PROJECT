@@ -1,42 +1,38 @@
 body{
-    display:grid;
     font-size: 40px;
+    display: grid;
+    background-image: url("futsal.png");
+    background-repeat: no-repeat;
+    background-color: #0D0D0D;
+    color: white;
 }
 
-.container2{
-    position:absolute;
+input[type=button], input[type=submit], input[type=reset] {
+    color: white;
+}    
+
+h1{
+    text-align: center;
+    font-size: 40px;
 }
 
 .campo img{ 
     margin: auto;
+    display: block;
+    width: 70%;
+}
+
+.posicoes{
+    position: relative;
+}
+
+.reservas{
+    display: flex;
+    justify-content: center;
 }
 
 .goalkeeper{
-    top: -535px;
-    left: 855px;
-    position: relative;
-}
-
-.fixed{
-    top: -608px;
-    left: 655px;
-    position: relative;
-}
-
-.rightwing{
-    top: -850px;
-    left: 465px;
-    position: relative;
-}
-
-.leftwing{
-    top: -565px;
-    left: 465px;
-    position: relative;
-}
-
-.target{
-    top: -850px;
-    left: 165px;
-    position: relative;
+    top: -670px;
+    left: 1200px;
+    position: absolute;
 }
