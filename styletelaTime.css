@@ -32,7 +32,31 @@ h1{
 }
 
 .goalkeeper{
-    top: -670px;
-    left: 1200px;
+    top: -710px;
+    left: 1300px;
+    position: absolute;
+}
+
+.fixed{
+    top: -700px;
+    left: 1100px;
+    position: absolute;
+}
+
+.rightwing{
+    top: -900px;
+    left: 900px;
+    position: absolute;
+}
+
+.leftwing{
+    top: -500px;
+    left: 900px;
+    position: absolute;
+}
+
+.target{
+    top: -700px;
+    left: 600px;
     position: absolute;
 }
