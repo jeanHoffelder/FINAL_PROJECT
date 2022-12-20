@@ -162,11 +162,11 @@ echo "</div>";
         <br>
         Second Reserve: <input name='reserva2' placeholder='drop desired player here' required>
         <br>
-        third Reserve: <input name='reserva3' placeholder='drop desired player here' required>
+        Third Reserve: <input name='reserva3' placeholder='drop desired player here' required>
         <br>
-        fourth Reserve: <input name='reserva4' placeholder='drop desired player here' required>
+        Fourth Reserve: <input name='reserva4' placeholder='drop desired player here' required>
         <br>
-        fifth Reserve: <input name='reserva5' placeholder='drop desired player here' required>
+        Fifth Reserve: <input name='reserva5' placeholder='drop desired player here' required>
         <br>
 
         <input type='submit' name='botao' value='create team'>

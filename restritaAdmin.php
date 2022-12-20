@@ -6,7 +6,6 @@ if(!isset($_SESSION['id'])){
 }
 require_once __DIR__."/vendor/autoload.php";
 
-$atletas = Atleta::findall();
 $times = Time::findall();
 
 ?>
@@ -27,17 +26,49 @@ $times = Time::findall();
     <br>
     <a href="telaTime.php"><button class='botao'>Create a new Team</button></a>
     <br>
+    <br>
 
 
-
-<table border="1" cellpadding="10" cellspacing="0">
+<table>
     <tr>
         <td>Team Name</td>
+
+        <td>Name Goalkeeper</td>
+
+        <td>Name Fixed</td>
+
+        <td>Name Right-Wing</td>
+
+        <td>Name Left-Wing</td>
+
+        <td>Name Target</td>
+
+        <td>Name First Reserve</td>
+
+        <td>Name Second Reserve</td>
+
+        <td>Name Third Reserve</td>
+
+        <td>Name Fourth Reserve</td>
+
+        <td>Name Fifth Reserve</td>
     </tr>
+
     <?php
     foreach($times as $time){
         echo "<tr>";
         echo "<td>{$time->getNome_time()}</td>";
+        echo "<td>"; echo Jogador::find($time->getId_goleiro())->getNomeJogador(); echo"</td>";
+        echo "<td>"; echo Jogador::find($time->getId_fixo())->getNomeJogador(); echo"</td>";
+        echo "<td>"; echo Jogador::find($time->getId_alaDireita())->getNomeJogador(); echo"</td>";
+        echo "<td>"; echo Jogador::find($time->getId_alaEsquerda())->getNomeJogador(); echo"</td>";
+        echo "<td>"; echo Jogador::find($time->getId_Pivo())->getNomeJogador(); echo"</td>";
+        echo "<td>"; echo Jogador::find($time->getId_reserva1())->getNomeJogador(); echo"</td>";
+        echo "<td>"; echo Jogador::find($time->getId_reserva2())->getNomeJogador(); echo"</td>";
+        echo "<td>"; echo Jogador::find($time->getId_reserva3())->getNomeJogador(); echo"</td>";
+        echo "<td>"; echo Jogador::find($time->getId_reserva4())->getNomeJogador(); echo"</td>";
+        echo "<td>"; echo Jogador::find($time->getId_reserva5())->getNomeJogador(); echo"</td>";
+
         // echo "<td>
         //         <a href='excluir.php?id={$time->getId()}'>Delete</a> 
         //      </td>";

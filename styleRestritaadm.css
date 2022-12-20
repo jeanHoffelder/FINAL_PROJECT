@@ -14,6 +14,7 @@ body{
     text-align: center;
     margin: 0 auto; 
 }
+
 header{
     background-color: #469653;
     color: white;
@@ -166,6 +167,8 @@ label{
     body{
         font-size: 40px;
     }
+
+
     
     
     input[type=button], input[type=submit], input[type=reset]{
@@ -202,4 +205,20 @@ label{
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     }
 
+    table{
+        font-size: 20px;
+    }
+    td, tr {
+        border: 2px solid #ffffff;
+        text-align: center;
+        padding: 5px;
+      }
+      tr:first-child {
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        background-color: rgb(138, 131, 131);
+      }
+      td{
+        color: rgb(255, 255, 255);
+      }
 }

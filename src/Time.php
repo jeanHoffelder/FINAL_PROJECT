@@ -80,7 +80,7 @@ class Time implements ActiveRecord{
     }
 
     public function getId_Pivo():int{
-        return $this->id_pivo;
+        return $this->id_Pivo;
     }
 
     public function getId_reserva1():int{
