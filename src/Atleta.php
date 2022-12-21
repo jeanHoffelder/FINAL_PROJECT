@@ -160,6 +160,32 @@ class Atleta implements ActiveRecord{
         }
         return $atletas;
     }
+    public static function findall2():array{
+        $conexao = new MySQL();
+        $sql = "SELECT * FROM `atletas`, time 
+        WHERE atletas.id!=time.id_goleiro AND atletas.id!=time.id_fixo AND atletas.id!=time.id_alaDireita 
+        AND atletas.id!=time.id_alaEsquerda AND atletas.id!=time.id_Pivo AND atletas.id!=time.id_reserva1 
+        AND atletas.id!=time.id_reserva2 AND atletas.id!=time.id_reserva3 AND atletas.id!=time.id_reserva4 
+        AND atletas.id!=time.id_reserva5 group by id";
+        $resultados = $conexao->consulta($sql);
+        
+        $atletas = array();
+        foreach($resultados as $resultado){
+            $p = new Atleta($resultado['email']);
+            $p->setId($resultado['id']);
+            $p->setNome($resultado['nome']);
+            $p->setData_nasc($resultado['data_nasc']);
+            $p->setTurma($resultado['turma']);
+            $p->setAltura($resultado['altura']);
+            $p->setPosicao($resultado['posicao']);
+            $p->setFoto($resultado['foto']);
+            $p->setSenha($resultado['senha']);
+            $p->setSexo($resultado['sexo']);
+            $atletas[] = $p;
+        }
+        return $atletas;
+    }
+
 
     public function authenticate():bool{
         $conexao = new MySQL();

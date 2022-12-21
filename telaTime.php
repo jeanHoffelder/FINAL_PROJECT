@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__."/vendor/autoload.php";
-$atletas = Atleta::findall(); 
+$atletas = Atleta::findall2(); 
 
 session_start();
 if(!isset($_SESSION['id'])){
@@ -43,6 +43,7 @@ if(isset($_POST['botao'])){
         border-radius: 10px;
         float: left;
         overflow: hidden;
+        color: rgb(0, 0, 0);
     }
     .elementos_card {
       background-color: #f1f1f1;
@@ -141,33 +142,262 @@ echo "</div>";
 <br>
 <br>
 <div class='containerfh1'>
-  <img src="Campofutsal.png" alt="">
-<h1>CHOOSE PLAYER'S CARDS</h1>
+<h1>SELECT PLAYER'S</h1>
     <div class='container2'>
       <form action="telaTime.php" method='POST'>
 
-        Name Team: <input name='nome' placeholder='Ex: gremio' required>
+        Name Team: <input name='nome' placeholder='Ex: Brasil' required>
         <br>
-        Goalkeeper: <input name='goleiro' placeholder='drop desired player here' required>
-        <br>
-        Fixed: <input name='fixo' placeholder='drop desired player here' required>
-        <br>
-        Right-Wing: <input name='ala_dir' placeholder='drop desired player here' required>
-        <br>
-        Left-Wing: <input name='ala_esq' placeholder='drop desired player here' required>
-        <br>
-        Target: <input name='pivo' placeholder='drop desired player here' required>
-        <br>
-        First Reserve: <input name='reserva1' placeholder='drop desired player here' required>
-        <br>
-        Second Reserve: <input name='reserva2' placeholder='drop desired player here' required>
-        <br>
-        Third Reserve: <input name='reserva3' placeholder='drop desired player here' required>
-        <br>
-        Fourth Reserve: <input name='reserva4' placeholder='drop desired player here' required>
-        <br>
-        Fifth Reserve: <input name='reserva5' placeholder='drop desired player here' required>
-        <br>
+<label for="select2">Goalkeeper:</label>
+<select name="goleiro" id="select1" required onchange="desabilitarOpcao('select1')">
+<option value="" selected disabled select></option>
+<?php
+        $conexao = new MySQL();
+        $sql = "SELECT id, nome, turma, posicao FROM `atletas`, time 
+        WHERE atletas.id!=time.id_goleiro AND atletas.id!=time.id_fixo AND atletas.id!=time.id_alaDireita 
+        AND atletas.id!=time.id_alaEsquerda AND atletas.id!=time.id_Pivo AND atletas.id!=time.id_reserva1 
+        AND atletas.id!=time.id_reserva2 AND atletas.id!=time.id_reserva3 AND atletas.id!=time.id_reserva4 
+        AND atletas.id!=time.id_reserva5 
+        GROUP by id 
+        order by nome asc";
+        $jogadores = $conexao->executa($sql);
+
+        foreach($jogadores as $jogador){
+            echo "<option  value='{$jogador['id']}'>{$jogador['nome']}, from {$jogador['turma']}, who prefers to play as {$jogador['posicao']}</option>";
+        }
+
+?>
+</select>
+
+<br>
+<label for="select2">Fixed:</label>
+<select name="fixo" id="select2" required onchange="desabilitarOpcao('select2')">
+<option value="" selected disabled select></option>
+<?php
+        $conexao = new MySQL();
+        $sql = "SELECT id, nome, turma, posicao FROM `atletas`, time 
+        WHERE atletas.id!=time.id_goleiro AND atletas.id!=time.id_fixo AND atletas.id!=time.id_alaDireita 
+        AND atletas.id!=time.id_alaEsquerda AND atletas.id!=time.id_Pivo AND atletas.id!=time.id_reserva1 
+        AND atletas.id!=time.id_reserva2 AND atletas.id!=time.id_reserva3 AND atletas.id!=time.id_reserva4 
+        AND atletas.id!=time.id_reserva5 
+        GROUP by id 
+        order by nome asc";
+        $jogadores = $conexao->executa($sql);
+
+        foreach($jogadores as $jogador){
+            echo "<option  value='{$jogador['id']}'>{$jogador['nome']}, from {$jogador['turma']}, who prefers to play as {$jogador['posicao']}</option>";
+        }
+
+?>
+</select>
+
+<br>
+<label for="select3">Right-Wing:</label>
+<select name="ala-dir" id="select3" required onchange="desabilitarOpcao('select3')">
+<option value="" selected disabled select></option>
+<?php
+        $conexao = new MySQL();
+        $sql = "SELECT id, nome, turma, posicao FROM `atletas`, time 
+        WHERE atletas.id!=time.id_goleiro AND atletas.id!=time.id_fixo AND atletas.id!=time.id_alaDireita 
+        AND atletas.id!=time.id_alaEsquerda AND atletas.id!=time.id_Pivo AND atletas.id!=time.id_reserva1 
+        AND atletas.id!=time.id_reserva2 AND atletas.id!=time.id_reserva3 AND atletas.id!=time.id_reserva4 
+        AND atletas.id!=time.id_reserva5 
+        GROUP by id 
+        order by nome asc";
+        $jogadores = $conexao->executa($sql);
+
+        foreach($jogadores as $jogador){
+            echo "<option  value='{$jogador['id']}'>{$jogador['nome']}, from {$jogador['turma']}, who prefers to play as {$jogador['posicao']}</option>";
+        }
+
+?>
+</select>
+
+<br>
+<label for="select4">Left-Wing:</label>
+<select name="ala-esq" id="select4" required onchange="desabilitarOpcao('select4')">
+<option value="" selected disabled select></option>
+<?php
+        $conexao = new MySQL();
+        $sql = "SELECT id, nome, turma, posicao FROM `atletas`, time 
+        WHERE atletas.id!=time.id_goleiro AND atletas.id!=time.id_fixo AND atletas.id!=time.id_alaDireita 
+        AND atletas.id!=time.id_alaEsquerda AND atletas.id!=time.id_Pivo AND atletas.id!=time.id_reserva1 
+        AND atletas.id!=time.id_reserva2 AND atletas.id!=time.id_reserva3 AND atletas.id!=time.id_reserva4 
+        AND atletas.id!=time.id_reserva5 
+        GROUP by id 
+        order by nome asc";
+        $jogadores = $conexao->executa($sql);
+
+        foreach($jogadores as $jogador){
+            echo "<option  value='{$jogador['id']}'>{$jogador['nome']}, from {$jogador['turma']}, who prefers to play as {$jogador['posicao']}</option>";
+        }
+
+?>
+</select>
+
+<br>
+<label for="select5">Target:</label>
+<select name="pivo" id="select5" required onchange="desabilitarOpcao('select5')">
+<option value="" selected disabled select></option>
+<?php
+        $conexao = new MySQL();
+        $sql = "SELECT id, nome, turma, posicao FROM `atletas`, time 
+        WHERE atletas.id!=time.id_goleiro AND atletas.id!=time.id_fixo AND atletas.id!=time.id_alaDireita 
+        AND atletas.id!=time.id_alaEsquerda AND atletas.id!=time.id_Pivo AND atletas.id!=time.id_reserva1 
+        AND atletas.id!=time.id_reserva2 AND atletas.id!=time.id_reserva3 AND atletas.id!=time.id_reserva4 
+        AND atletas.id!=time.id_reserva5 
+        GROUP by id 
+        order by nome asc";
+        $jogadores = $conexao->executa($sql);
+
+        foreach($jogadores as $jogador){
+            echo "<option  value='{$jogador['id']}'>{$jogador['nome']}, from {$jogador['turma']}, who prefers to play as {$jogador['posicao']}</option>";
+        }
+
+?>
+</select>
+
+<br>
+<label for="select6">First Reserve:</label>
+<select name="reserva1" id="select6" required onchange="desabilitarOpcao('select6')">
+<option value="" selected disabled select></option>
+<?php
+        $conexao = new MySQL();
+        $sql = "SELECT id, nome, turma, posicao FROM `atletas`, time 
+        WHERE atletas.id!=time.id_goleiro AND atletas.id!=time.id_fixo AND atletas.id!=time.id_alaDireita 
+        AND atletas.id!=time.id_alaEsquerda AND atletas.id!=time.id_Pivo AND atletas.id!=time.id_reserva1 
+        AND atletas.id!=time.id_reserva2 AND atletas.id!=time.id_reserva3 AND atletas.id!=time.id_reserva4 
+        AND atletas.id!=time.id_reserva5 
+        GROUP by id 
+        order by nome asc";
+        $jogadores = $conexao->executa($sql);
+
+        foreach($jogadores as $jogador){
+            echo "<option  value='{$jogador['id']}'>{$jogador['nome']}, from {$jogador['turma']}, who prefers to play as {$jogador['posicao']}</option>";
+        }
+
+?>
+</select>
+
+<br>
+<label for="select7">Second Reserve:</label>
+<select name="reserva2" id="select7" required onchange="desabilitarOpcao('select7')">
+<option value="" selected disabled select></option>
+<?php
+        $conexao = new MySQL();
+        $sql = "SELECT id, nome, turma, posicao FROM `atletas`, time 
+        WHERE atletas.id!=time.id_goleiro AND atletas.id!=time.id_fixo AND atletas.id!=time.id_alaDireita 
+        AND atletas.id!=time.id_alaEsquerda AND atletas.id!=time.id_Pivo AND atletas.id!=time.id_reserva1 
+        AND atletas.id!=time.id_reserva2 AND atletas.id!=time.id_reserva3 AND atletas.id!=time.id_reserva4 
+        AND atletas.id!=time.id_reserva5 
+        GROUP by id 
+        order by nome asc";
+        $jogadores = $conexao->executa($sql);
+
+        foreach($jogadores as $jogador){
+            echo "<option  value='{$jogador['id']}'>{$jogador['nome']}, from {$jogador['turma']}, who prefers to play as {$jogador['posicao']}</option>";
+        }
+
+?>
+</select>
+
+<br>
+<label for="select8">Third Reserve:</label>
+<select name="reserva3" id="select8" required onchange="desabilitarOpcao('select8')">
+<option value="" selected disabled select></option>
+<?php
+        $conexao = new MySQL();
+        $sql = "SELECT id, nome, turma, posicao FROM `atletas`, time 
+        WHERE atletas.id!=time.id_goleiro AND atletas.id!=time.id_fixo AND atletas.id!=time.id_alaDireita 
+        AND atletas.id!=time.id_alaEsquerda AND atletas.id!=time.id_Pivo AND atletas.id!=time.id_reserva1 
+        AND atletas.id!=time.id_reserva2 AND atletas.id!=time.id_reserva3 AND atletas.id!=time.id_reserva4 
+        AND atletas.id!=time.id_reserva5 
+        GROUP by id 
+        order by nome asc";
+        $jogadores = $conexao->executa($sql);
+
+        foreach($jogadores as $jogador){
+            echo "<option  value='{$jogador['id']}'>{$jogador['nome']}, from {$jogador['turma']}, who prefers to play as {$jogador['posicao']}</option>";
+        }
+
+?>
+</select>
+
+<br>
+<label for="select9">Fourth Reserve:</label>
+<select name="reserva4" id="select9" required onchange="desabilitarOpcao('select9')">
+<option value="" selected disabled select></option>
+<?php
+        $conexao = new MySQL();
+        $sql = "SELECT id, nome, turma, posicao FROM `atletas`, time 
+        WHERE atletas.id!=time.id_goleiro AND atletas.id!=time.id_fixo AND atletas.id!=time.id_alaDireita 
+        AND atletas.id!=time.id_alaEsquerda AND atletas.id!=time.id_Pivo AND atletas.id!=time.id_reserva1 
+        AND atletas.id!=time.id_reserva2 AND atletas.id!=time.id_reserva3 AND atletas.id!=time.id_reserva4 
+        AND atletas.id!=time.id_reserva5 
+        GROUP by id 
+        order by nome asc";
+        $jogadores = $conexao->executa($sql);
+
+        foreach($jogadores as $jogador){
+            echo "<option  value='{$jogador['id']}'>{$jogador['nome']}, from {$jogador['turma']}, who prefers to play as {$jogador['posicao']}</option>";
+        }
+
+?>
+</select>
+
+<br>
+<label for="select10">Fifth Reserve:</label>
+<select name="reserva5" id="select10" required onchange="desabilitarOpcao('select10')">
+<option value="" selected disabled select></option>
+<?php
+        $conexao = new MySQL();
+        $sql = "SELECT id, nome, turma, posicao FROM `atletas`, time 
+        WHERE atletas.id!=time.id_goleiro AND atletas.id!=time.id_fixo AND atletas.id!=time.id_alaDireita 
+        AND atletas.id!=time.id_alaEsquerda AND atletas.id!=time.id_Pivo AND atletas.id!=time.id_reserva1 
+        AND atletas.id!=time.id_reserva2 AND atletas.id!=time.id_reserva3 AND atletas.id!=time.id_reserva4 
+        AND atletas.id!=time.id_reserva5 
+        GROUP by id 
+        order by nome asc";
+        $jogadores = $conexao->executa($sql);
+
+        foreach($jogadores as $jogador){
+            echo "<option  value='{$jogador['id']}'>{$jogador['nome']}, from {$jogador['turma']}, who prefers to play as {$jogador['posicao']}</option>";
+        }
+
+?>
+</select>
+
+
+<script>
+  var opcoesDesabilitadas = [];
+
+function desabilitarOpcao(idSelect) {
+  // Obtemos o valor selecionado no select que foi alterado
+  var valorSelecionado = document.getElementById(idSelect).value;
+
+  // Adicionamos o valor à lista de opções desabilitadas
+  opcoesDesabilitadas.push(valorSelecionado);
+
+  // Obtemos as opções dos demais selects
+  var selects = document.querySelectorAll("select:not(#" + idSelect + ")");
+
+  // Desabilitamos a opção com o mesmo valor do select alterado em todos os demais selects
+  for (var i = 0; i < selects.length; i++) {
+    var opcoes = selects[i].options;
+    for (var j = 0; j < opcoes.length; j++) {
+      if (opcoesDesabilitadas.includes(opcoes[j].value)) {
+        opcoes[j].disabled = true;
+      } else {
+        opcoes[j].disabled = false;
+      }
+    }
+  }
+}
+</script>
+
+
+
+
 
         <input type='submit' name='botao' value='create team'>
       </form>
@@ -176,3 +406,4 @@ echo "</div>";
 </div>
 </body>
 </html>
+ 
