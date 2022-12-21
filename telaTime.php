@@ -1,10 +1,14 @@
 <?php
 require_once __DIR__."/vendor/autoload.php";
 
+if (isset($_GET['conteudo']) && $_GET['conteudo'] == 'nao') {
+  $atletas = Atleta::findall();
+} else {
+  $atletas = Atleta::findall2(); 
+}
 
 
 
-$atletas = Atleta::findall2(); 
 
 session_start();
 if(!isset($_SESSION['id'])){
