@@ -37,8 +37,8 @@ if(isset($_POST['botao'])){
 <head>
   <style>
     .card{
-        width: 300px;
-        height: 350px;
+        width: 250px;
+        height: 300px;
         border: 1px solid #ccc;
         margin: 10px;
         border-radius: 10px;
@@ -55,7 +55,7 @@ if(isset($_POST['botao'])){
     }
     .card img {
       width: 100%;
-      height: 200px;
+      height: 175px;
       object-fit: cover;
     }
     .card h1 {
@@ -88,29 +88,41 @@ function calcularIdade($data){
        return $idade;
    } 
 
-echo "<div id='container'>";
-
-
-foreach($atletas as $atleta){
-  $foto = $atleta->getFoto();
-  $nome = $atleta->getNome();
-  $posicao = $atleta->getPosicao();
-  $idade = calcularIdade($atleta->getData_nasc());
-  $turma = $atleta->getTurma();
-  $id = $atleta->getId();
-
-  echo "<div class='card' draggable='true' id=$id>";
-    echo "<div class='elementos_card'>";
-      echo " <img width=150px src={$foto}>";
-      echo "<h1> $nome </h1>";
-      echo "<p>Favorite Position: $posicao </p>";
-      echo "<p>age: $idade y.o</p>";
-      echo "<p>group: $turma </p>";
-    echo "</div>";
-  echo "</div>";
-} 
-echo "</div>";
 ?>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+<div id="said1" class="modal">
+  <?php
+  echo "<div id='container'>";
+
+
+  foreach($atletas as $atleta){
+    $foto = $atleta->getFoto();
+    $nome = $atleta->getNome();
+    $posicao = $atleta->getPosicao();
+    $idade = calcularIdade($atleta->getData_nasc());
+    $turma = $atleta->getTurma();
+    $id = $atleta->getId();
+  
+    echo "<div class='card' draggable='true' id=$id>";
+      echo "<div class='elementos_card'>";
+        echo " <img width=150px src={$foto}>";
+        echo "<h1> $nome </h1>";
+        echo "<p>Favorite Position: $posicao </p>";
+        echo "<p>age: $idade y.o</p>";
+        echo "<p>group: $turma </p>";
+      echo "</div>";
+    echo "</div>";
+  } 
+  echo "</div>";
+  ?>
+</div>
+    
+<p><a href="#said1" rel="modal:open"><span class="butao_cards">Cards</span></a></p>
+
 <script>
 
   var container = document.getElementById('container');
@@ -140,15 +152,12 @@ echo "</div>";
   }
 </script>
 
-
-<br>
-<br>
 <div class='containerfh1'>
 <h1>SELECT PLAYER'S</h1>
     <div class='container2'>
       <form action="telaTime.php" method='POST'>
 
-        Name Team: <input name='nome' placeholder='Ex: Brasil' required>
+        Name Team: <input type="text" name='nome' placeholder='Ex: Brasil' required>
         <br>
 <label for="select2">Goalkeeper:</label>
 <select name="goleiro" id="select1" required onchange="desabilitarOpcao('select1')">
