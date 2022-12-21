@@ -1,5 +1,9 @@
 <?php
 require_once __DIR__."/vendor/autoload.php";
+
+
+
+
 $atletas = Atleta::findall2(); 
 
 session_start();
