@@ -24,7 +24,7 @@ $atleta = Atleta::find($_SESSION['id']);
     <?php
     echo "<a href=formEdit.php?id={$_SESSION['id']}>   <button  class='botao'>edit profile</button> </a>";
     ?>
-    <a href='sair.php'> <button class='botao'>logout</button></a>
+    <a href='sair.php'> <button class='botao'>log out</button></a>
     </header>
     <br>
     

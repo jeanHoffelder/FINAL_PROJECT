@@ -21,7 +21,7 @@ $times = Time::findall();
 <body>
 <header>
         <?php echo "<h2>Welcome, Administrator</h2>"?>
-    <a href='sair.php'> <button class='botao'>logout</button></a>
+    <a href='sair.php'> <button class='botao'>log out</button></a>
     </header>
     <br>
     <a href="telaTime.php"><button class='botao'>Create a new Team</button></a>
