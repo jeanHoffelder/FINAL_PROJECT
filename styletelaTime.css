@@ -104,7 +104,7 @@ h1{
     margin: auto;
 }
 
-select{
+select, input[type="text"]{
     width: 80%;
     max-width: 500px;
     min-width: 200px;

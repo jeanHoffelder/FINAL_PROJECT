@@ -170,40 +170,13 @@ function calcularIdade($data){
   }
 </script>
 
-<?php
-//  <div>
-// <!-- Remember to include jQuery :) -->
-// <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-
-// <!-- jQuery Modal -->
-// <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-// <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-//  </div>
-
-//  <div id="ex1" class="modal">
-//   <p>Thanks for clicking. That felt good.</p>
-//   <a href="#" rel="modal:close">Close</a>
-// </div>
-
-// <!-- Link to open the modal -->
-// <p><a href="#ex1" rel="modal:open">Open Modal</a></p>
-
- 
-// if($eRepetido){
-// echo  "<script>window.alert('Email enviado com Sucesso!');</script>";
-// } ?>
-
-
 <div class='containerfh1'>
 <h1>SELECT PLAYER'S</h1>
     <div class='container2'>
       <form action="telaTime.php" method='POST'>
-
-        Name Team: <input type="text" name='nome' placeholder='Ex: Brasil' required>
-        <br>
-        Name Team: <input name='nome' placeholder='Ex: Brasil' required>
         
   <div class='select'>
+  Name Team: <input type="text" name='nome' placeholder='Ex: Brasil' required>
 <label for="select2">Goalkeeper:</label>
 <select name="goleiro" id="select1" required onchange="desabilitarOpcao('select1')">
 <option value="" selected disabled select></option>
