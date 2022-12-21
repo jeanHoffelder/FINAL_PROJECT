@@ -2,7 +2,7 @@ body{
     font-size: 40px;
     display: grid;
     background-image: url("futsal.png");
-    background-repeat: repeat;
+    background-attachment: fixed;
     background-color: #252525;
     color: rgb(255, 255, 255);
 }
