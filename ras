@@ -371,24 +371,26 @@ echo "</div>";
 
 
 <script>
-  var opcoesDesabilitadas = [];
+  // var opcoesDesabilitadas = [];
 
 function desabilitarOpcao(idSelect) {
   // Obtemos o valor selecionado no select que foi alterado
   var valorSelecionado = document.getElementById(idSelect).value;
 
-  // Adicionamos o valor à lista de opções desabilitadas
-  opcoesDesabilitadas.push(valorSelecionado);
+  // // Adicionamos o valor à lista de opções desabilitadas
+  // opcoesDesabilitadas.push(valorSelecionado);
 
   // Obtemos as opções dos demais selects
   var selects = document.querySelectorAll("select:not(#" + idSelect + ")");
 
   // Desabilitamos a opção com o mesmo valor do select alterado em todos os demais selects
   for (var i = 0; i < selects.length; i++) {
-      var opcoes = selects[i].options;
-      var valorAtual = selects[i].value;
-      for (var j = 0; j < opcoes.length; j++) {
-        if (opcoesDesabilitadas.includes(opcoes[j].value)) {
+    var opcoes = selects[i].options;
+    for (var j = 0; j < opcoes.length; j++) {
+      if (opcoesDesabilitadas.includes(opcoes[j].value)) {
+        opcoes[j].disabled = true;
+      } else {
+        opcoes[j].disabled = false;
       }
     }
   }

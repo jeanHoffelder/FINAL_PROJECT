@@ -12,15 +12,18 @@ class Checar{
         return $this->conteudo;
     }
 
-    public static function find(): Checar
+    public static function find(): string
     {
         $conexao = new MySQL();
-        $sql = "SELECT atletas.id, atletas.nome FROM atletas WHERE atletas.id = {$id}";
+        $sql = "SELECT
+        CASE
+          WHEN not EXISTS (SELECT * FROM time) THEN 'nao'
+          ELSE 'sim'
+        END as a
+      FROM dual;";
         $resultado = $conexao->consulta($sql);
-        $u = new Checar($resultado[0]['conteudo']);
-        return $u;
+        return $resultado[0]['a'];
     }
-
 }
 
 
